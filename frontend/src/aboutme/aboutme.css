@@ -1,0 +1,5 @@
+.rr-aboutme {
+    background: teal;
+    height:calc((50vw + 50vh)/2);
+    min-width: 960px;
+}

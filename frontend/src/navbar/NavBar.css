@@ -1,0 +1,77 @@
+.App-navbar {
+    background: #222;
+    height: 70px;
+    position: fixed;
+    z-index: 100;
+    min-width: 100vw;
+}
+
+.App-navbar-content {
+    background: #222;
+    width: 960px;
+    margin-left: calc(50vw - 480px);
+    height: 70px;
+    max-height: 70px;
+    min-height: 70px;
+    font-size: 16pt;
+    display: inline-flex;
+}
+
+.App-navbar-home {
+    max-height: 70px;
+    vertical-align: middle;
+}
+
+.App-navbar-home img {
+    margin-top: 2px;
+}
+
+.rr-navbar-flexitem {
+    display: inline-block;
+    height: 70px;
+    max-height: 70px;
+    list-style: none;
+    order: 1;
+    flex-basis: 0;
+    flex-grow: 1;
+    line-height: 70px;
+}
+
+.App-navbar-item {
+    display: inline-block;
+}
+
+.App-navbar-link {
+    height: 70px;
+    max-height: 70px;
+    color: #fafafa;
+    text-decoration: none;
+    line-height: 70px;
+}
+
+.App-navbar-link:hover {
+    color: #70dff4;
+}
+
+.rr-navbar-github {
+    max-height: 70px;
+}
+
+.rr-navbar-github span {
+    margin-top: 13px;
+}
+
+.rr-navbar-mail span {
+    margin-top: 13px;
+}
+
+@media screen and (max-width: 960px) {
+    .App-navbar-content {
+      margin-left: 0;
+    }
+
+    .rr-navbar-flexitem {
+        max-width: calc(100vw/3)
+    }
+
+}

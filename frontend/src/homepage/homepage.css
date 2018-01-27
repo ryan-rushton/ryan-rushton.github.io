@@ -1,0 +1,36 @@
+.rr-homepage {
+    background: url('../static/background.jpg');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #222;
+
+    height: calc(100vh - 70px);
+    min-height: 100vh;
+
+    width: 100vw;
+    min-width: 960px;
+}
+
+.rr-intro-block {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 5vw;
+    color: white;
+    position: relative;
+    top: 25vh;
+}
+
+.rr-intro-text {
+    padding-top: 10px;
+    padding-bottom: 25px;
+    margin: auto;
+    position: relative;
+    width: 55vw;
+    min-width: 55vw;
+    text-align: center;
+}
+
+.rr-intro-hi {
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+}

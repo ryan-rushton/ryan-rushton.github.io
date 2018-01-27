@@ -2,12 +2,15 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://rushton3179.github.io/personal-site/frontend",
+  "homepage": "https://rushton3179.github.io/personal-site",
   "dependencies": {
-    "gh-pages": "^1.0.0",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-scripts": "1.0.10"
+    "gh-pages": "^1.1.0",
+    "jquery": "^3.2.1",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2",
+    "react-fontawesome": "^1.6.1",
+    "react-scripts": "^1.1.0",
+    "uikit": "^3.0.0-beta.37"
   },
   "scripts": {
     "predeploy": "npm run build",
