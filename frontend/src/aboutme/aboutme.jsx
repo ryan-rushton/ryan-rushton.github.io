@@ -2,7 +2,7 @@ import React from 'react'
 import './aboutme.css'
 import myDayInfographic from '../static/myDayInfo.png'
 
-const AboutMe = (props) => {
+const AboutMe = () => {
     return (
         <div className="rr-aboutme">
             <div className="rr-infographic">
