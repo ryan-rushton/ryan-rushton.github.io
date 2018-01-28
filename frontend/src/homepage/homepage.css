@@ -4,15 +4,13 @@
     background-position: center;
     background-repeat: no-repeat;
     background-color: #222;
-
     height: calc(100vh - 70px);
     min-height: 100vh;
-
     width: 100vw;
     min-width: 960px;
 }
 
-.rr-intro-block {
+.rr-homepage-intro-block {
     font-family: 'Open Sans', sans-serif;
     font-size: 5vw;
     color: white;
@@ -20,7 +18,7 @@
     top: 25vh;
 }
 
-.rr-intro-text {
+.rr-homepage-intro-text {
     padding-top: 10px;
     padding-bottom: 25px;
     margin: auto;
@@ -30,7 +28,11 @@
     text-align: center;
 }
 
-.rr-intro-hi {
+.rr-homepage-intro-hi {
     text-align: center;
     font-family: 'Permanent Marker', cursive;
+}
+
+.rr-homepage-arrow-circle-down .fa-arrow-circle-down {
+    cursor: pointer;
 }

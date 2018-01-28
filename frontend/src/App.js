@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
 import './App.css';
 import Homepage from './homepage/homepage';
-import Blurbpage from './blurbpage/blurbpage';
 import NavBar from './navbar/NavBar'
-import AboutMe from './aboutme/aboutme'
+import Intro from './Intro/intro'
 
 class App extends Component {
     render() {
@@ -11,8 +10,7 @@ class App extends Component {
             <div>
                 <NavBar/>
                 <Homepage/>
-                <Blurbpage/>
-                <AboutMe/>
+                <Intro/>
             </div>
         );
     }

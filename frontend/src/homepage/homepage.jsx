@@ -11,11 +11,11 @@ const Homepage = () => {
 
     return (
         <div className="rr-homepage">
-            <div className="rr-intro-block">
-                <div className="rr-intro-text">
-                    <div className="rr-intro-hi">HI! THIS WAY</div>
-                    <div className="rr-arrow-circle-down" onClick={arrowClickEvent}>
-                        <FontAwesome name="arrow-circle-down" size="2x"/>
+            <div className="rr-homepage-intro-block">
+                <div className="rr-homepage-intro-text">
+                    <div className="rr-homepage-intro-hi">HI! THIS WAY</div>
+                    <div className="rr-homepage-arrow-circle-down">
+                        <FontAwesome name="arrow-circle-down" size="2x" onClick={arrowClickEvent}/>
                     </div>
                 </div>
             </div>

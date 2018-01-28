@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://rushton3179.github.io/personal-site",
   "dependencies": {
+    "d3": "^4.12.2",
     "gh-pages": "^1.1.0",
     "jquery": "^3.2.1",
     "react": "^15.6.2",

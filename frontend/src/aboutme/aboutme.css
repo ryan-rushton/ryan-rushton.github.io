@@ -1,5 +1,23 @@
 .rr-aboutme {
-    background: teal;
-    height:calc((50vw + 50vh)/2);
-    min-width: 960px;
+    margin: auto;
+    background: lightgray;
+    width: 780px;
+    min-width: 800px;
+}
+
+.rr-infographic {
+    max-height: 700px;
+    height: calc((50vw + 50vh)/2);
+    text-align: center;
+}
+
+.rr-infopraphic-title {
+    font-size: calc((5vw + 5vh)/2);
+    text-align: center;
+}
+
+.rr-infographic-img {
+    margin-top: calc((3vw + 3vh)/2);
+    height: calc((35vw + 35vh)/2);
+    max-height: 550px;
 }
