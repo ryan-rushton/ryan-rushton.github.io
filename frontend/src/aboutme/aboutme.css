@@ -12,6 +12,7 @@
 }
 
 .rr-infopraphic-title {
+    font-family: "Open Sans";
     font-size: calc((5vw + 5vh)/2);
     text-align: center;
 }

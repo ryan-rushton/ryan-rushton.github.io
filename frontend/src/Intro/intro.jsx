@@ -14,29 +14,34 @@ class Intro extends React.Component {
         super(props);
         this.state = {
             visibleComponent: INTRO_STATE.BLURB,
-            style: {
-                background: '#545454'
-            }
+            windowWidth: 960
         };
     };
 
     onRightArrowClick() {
         this.setState((prevState, props) => ({
-            visibleComponent: INTRO_STATE.ABOUT_ME,
-            style: {
-                background: 'lightgray'
-            }
+            visibleComponent: INTRO_STATE.ABOUT_ME
         }));
     };
 
     onLeftArrowClick() {
         this.setState((prevState, props) => ({
-            visibleComponent: INTRO_STATE.BLURB,
-            style: {
-                background: '#545454'
-            }
+            visibleComponent: INTRO_STATE.BLURB
         }));
     };
+
+    updateDimensions() {
+        this.setState({windowWidth: window.innerWidth});
+    }
+
+    componentDidMount() {
+        this.updateDimensions();
+        window.addEventListener("resize", this.updateDimensions.bind(this));
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener("resize", this.updateDimensions.bind(this));
+    }
 
     rightArrow = (
         <div className="rr-intro-arrow rr-intro-arrow-right">
@@ -51,8 +56,21 @@ class Intro extends React.Component {
     );
 
     renderBlurb() {
+        let style;
+
+        if (this.state.windowWidth <= 960) {
+            style = {
+                transform: this.state.visibleComponent === INTRO_STATE.BLURB ? 'translateX(0)' : 'translateX(-960px)'
+            };
+        }
+        else {
+            style = {
+                transform: this.state.visibleComponent === INTRO_STATE.BLURB ? 'translateX(0)' : 'translateX(-100vw)'
+            };
+        }
+
         return (
-            <div className="rr-intro-component" style={this.state.style}>
+            <div className="rr-intro-component-1" style={style}>
                 <div className="rr-intro-content">
                     <Blurbpage/>
                     {this.rightArrow}
@@ -62,8 +80,21 @@ class Intro extends React.Component {
     };
 
     renderAboutMe() {
+        let style;
+
+        if (this.state.windowWidth <= 960) {
+            style = {
+                transform: this.state.visibleComponent === INTRO_STATE.ABOUT_ME ? 'translateX(-960px)' : 'translateX(0)'
+            };
+        }
+        else {
+            style = {
+                transform: this.state.visibleComponent === INTRO_STATE.ABOUT_ME ? 'translateX(-100vw)' : 'translateX(0)'
+            };
+        }
+
         return (
-            <div className="rr-intro-component" style={this.state.style}>
+            <div className="rr-intro-component-2" style={style}>
                 <div className="rr-intro-content">
                     <AboutMe/>
                     {this.leftArrow}
@@ -73,11 +104,11 @@ class Intro extends React.Component {
     }
 
     render() {
-        if(this.state.visibleComponent === INTRO_STATE.ABOUT_ME) {
-            return this.renderAboutMe();
-        } else {
-            return this.renderBlurb();
-        }
+        return (
+            <div className="rr-intro-component">
+                {this.renderBlurb()}
+                {this.renderAboutMe()}
+            </div>);
     };
 }
 

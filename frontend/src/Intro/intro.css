@@ -1,9 +1,29 @@
 .rr-intro-component {
+    background: #545454;
+    overflow: hidden;
+    display: inline-flex;
     min-width: 960px;
+    width: 100vw;
+}
 
+.rr-intro-component-1 {
+    transition: All 1s ease;
+    order: 0;
+    background: #545454;
+    width: 100vw;
+    min-width: 100vw;
+}
+
+.rr-intro-component-2 {
+    transition: All 1s ease;
+    order: 1;
+    background: lightgray;
+    width: 100vw;
+    min-width: 100vw;
 }
 
 .rr-intro-content {
+    position: relative;
     margin-left: calc(50vw - 480px);
     display: inline-flex;
     max-width: 960px;
@@ -12,6 +32,7 @@
 }
 
 .rr-intro-arrow-right .fa-arrow-circle-right{
+    color: white;
     cursor: pointer;
 }
 
@@ -34,5 +55,13 @@
 
     .rr-intro-arrow {
         margin: auto;
+    }
+
+    .rr-intro-component-1 {
+        min-width: 960px;
+    }
+
+    .rr-intro-component-2 {
+        min-width: 960px;
     }
 }

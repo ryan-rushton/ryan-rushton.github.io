@@ -21,7 +21,7 @@
 }
 .rr-blurb-text {
     margin-top: calc((3vw + 3vh)/2);
-    font-size: calc((3vw + 3vh)/2);
+    font-size: calc((2.5vw + 2.5vh)/2);
     text-align: justify;
     text-justify: auto;
     height: calc((32vw + 32vh)/2);

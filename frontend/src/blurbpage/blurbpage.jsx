@@ -26,7 +26,7 @@ const Blurbpage = () => {
             </p>
             <p>
                 Please check out my {github} if you want to see how this
-                site works or a bunch on half finished (started) projects.
+                site works or a bunch on half finished (or started) projects.
             </p>
         </div>);
 
