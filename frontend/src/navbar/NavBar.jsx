@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import NavBarLink from './NavBarLink';
 import NavBarItem from './NavBarItem';
-import navbarItems from './navbarConfig';
+import navbarItems from './NavbarConfig';
 import './NavBar.css';
 
 const NavBarActual = (props) => {
