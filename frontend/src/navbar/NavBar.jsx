@@ -32,9 +32,9 @@ const NavBarActual = (props) => {
         </div>);
 
     const generateItems = (data) => {
+        let styles = {};
         let navItems;
         let key;
-        let styles;
 
         if (data.image) {
             navItems = generateHomeItem(data);
