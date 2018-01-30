@@ -3,4 +3,3 @@ node_js:
   - "iojs"
   - "7"
 before_install: cd frontend
-before_script: cd frontend
