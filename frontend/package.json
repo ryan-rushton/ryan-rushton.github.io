@@ -5,14 +5,10 @@
   "homepage": "https://rushton3179.github.io/personal-site",
   "dependencies": {
     "d3": "^4.13.0",
-    "eslint-config-react-app": "^2.1.0",
-    "gh-pages": "^1.1.0",
-    "jest-cli": "^22.1.4",
     "prop-types": "^15.6.0",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
-    "react-fontawesome": "^1.6.1",
-    "react-scripts": "^1.1.0"
+    "react-fontawesome": "^1.6.1"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -24,8 +20,11 @@
   },
   "devDependencies": {
     "eslint": "^4.16.0",
+    "eslint-config-react-app": "^2.1.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
-    "eslint-plugin-react": "^7.6.1"
+    "eslint-plugin-react": "^7.6.1",
+    "jest-cli": "^22.1.4",
+    "react-scripts": "^1.1.0"
   }
 }
