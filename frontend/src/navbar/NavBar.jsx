@@ -3,65 +3,59 @@ import PropTypes from 'prop-types';
 import NavBarLink from './NavBarLink';
 import NavBarItem from './NavBarItem';
 import navbarItems from './navbarConfig';
-import './NavBar.css'
+import './NavBar.css';
 
 const NavBarActual = (props) => {
-    const className =  "App-navbar";
-    let items;
+    const className = 'App-navbar';
 
-    const generateItem = (item, index) => {
-        return (<NavBarItem text={item.text}
-                                object={item.object} url={item.url}
-                                submenu={item.submenu}
-                                styles={item.styles}
-                                key={item.keyBase}
-                                keyBase = {item.keyBase}/>);
-    };
+    const generateItem = item => (
+        <NavBarItem
+            text={item.text}
+            object={item.object}
+            url={item.url}
+            submenu={item.submenu}
+            styles={item.styles}
+            key={item.keyBase}
+            keyBase={item.keyBase} />);
+
+    const generateHomeItem = homeItem => (
+        <div className="App-navbar-home">
+            <NavBarLink
+                key={`${homeItem.keyBase}-home`}
+                url={homeItem.url}
+                text={homeItem.text}
+                image={homeItem.image}
+                imageWidth={homeItem.imageWidth}
+                imageHeight={homeItem.imageHeight}
+                style={homeItem.styles}
+            />
+        </div>);
 
     const generateItems = (data) => {
         let navItems;
         let key;
-        let styles = {};
+        let styles;
 
         if (data.image) {
             navItems = generateHomeItem(data);
             key = data.keyBase;
-            styles = data.styles;
-        }
-        else if (data instanceof Array) {
+            ({ styles } = data);
+        } else if (data instanceof Array) {
             navItems = data.map((item, i) => generateItem(item, i));
             key = data.map(item => item.keyBase).join('-');
             data.forEach(item => Object.assign(styles, item.styles));
-        }
-        else {
+        } else {
             navItems = generateItem(data);
             key = data.keyBase;
-            styles = data.styles;
+            ({ styles } = data);
         }
         return (
-                <div className="rr-navbar-flexitem" style={styles} key={key}>
-                    {navItems}
-                </div>);
-
+            <div className="rr-navbar-flexitem" style={styles} key={key}>
+                {navItems}
+            </div>);
     };
 
-    const generateHomeItem = (homeItem) => {
-        return (
-                <div className="App-navbar-home">
-                    <NavBarLink
-                        key={homeItem.keyBase + '-home'}
-                        url={homeItem.url}
-                        text={homeItem.text}
-                        image={homeItem.image}
-                        imageWidth={homeItem.imageWidth}
-                        imageHeight={homeItem.imageHeight}
-                        style={homeItem.styles}
-                    />
-                </div>
-        );
-    };
-
-    items = props.items.map(item => generateItems(item));
+    const items = props.items.map(item => generateItems(item));
 
     return (
         <div className={className}>
@@ -73,18 +67,13 @@ const NavBarActual = (props) => {
 };
 
 NavBarActual.propTypes = {
-    homeItem: PropTypes.object,
     items: PropTypes.array,
-    isSubMenu: PropTypes.bool,
-    keyBase: PropTypes.string
 };
 
 NavBarActual.defaultProps = {
-    isSubMenu: false,
+    items: [],
 };
 
-const NavBar = () => {
-    return <NavBarActual items={navbarItems}/>;
-}
+const NavBar = () => <NavBarActual items={navbarItems} />;
 
 export default NavBar;

@@ -3,16 +3,15 @@ import FontAwesome from 'react-fontawesome';
 import './blurbpage.css';
 
 const Blurbpage = () => {
-
     const hiText = (
         <div className="rr-blurb-hi">
-            Hey, I'm Ryan!
+            Hey, I&apos;m Ryan!
         </div>
     );
 
     const github = (
         <a href="https://github.com/rushton3179/personal-site" >
-            <FontAwesome name="github"/>
+            <FontAwesome name="github" />
         </a>);
 
     const blurbText = (
@@ -20,7 +19,7 @@ const Blurbpage = () => {
             Welcome to my site.
             <p>
                 Here you can
-                expect to find a bunch of stuff I'm into, including pics I have
+                expect to find a bunch of stuff I&apos;m into, including pics I have
                 taken while on holiday, little apps I have made for things I
                 find interesting and of course how to get in touch.
             </p>

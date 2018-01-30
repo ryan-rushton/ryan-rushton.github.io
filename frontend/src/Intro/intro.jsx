@@ -2,11 +2,11 @@ import React from 'react';
 import FontAwesome from 'react-fontawesome';
 import AboutMe from '../aboutme/aboutme';
 import Blurbpage from '../blurbpage/blurbpage';
-import './intro.css'
+import './intro.css';
 
 const INTRO_STATE = {
-    BLURB: "BLURB",
-    ABOUT_ME: "ABOUT_ME"
+    BLURB: 'BLURB',
+    ABOUT_ME: 'ABOUT_ME',
 };
 
 class Intro extends React.Component {
@@ -14,89 +14,89 @@ class Intro extends React.Component {
         super(props);
         this.state = {
             visibleComponent: INTRO_STATE.BLURB,
-            windowWidth: 960
+            windowWidth: 960,
         };
-    };
 
-    onRightArrowClick() {
-        this.setState((prevState, props) => ({
-            visibleComponent: INTRO_STATE.ABOUT_ME
-        }));
-    };
+        this.onRightArrowClick = this.onRightArrowClick.bind(this);
+        this.onLeftArrowClick = this.onLeftArrowClick.bind(this);
 
-    onLeftArrowClick() {
-        this.setState((prevState, props) => ({
-            visibleComponent: INTRO_STATE.BLURB
-        }));
-    };
+        this.rightArrow = (
+            <div className="rr-intro-arrow rr-intro-arrow-right">
+                <FontAwesome name="arrow-circle-right" size="2x" onClick={this.onRightArrowClick} />
+            </div>);
 
-    updateDimensions() {
-        this.setState({windowWidth: window.innerWidth});
+        this.leftArrow = (
+            <div className="rr-intro-arrow rr-intro-arrow-left">
+                <FontAwesome name="arrow-circle-left" size="2x" onClick={this.onLeftArrowClick} />
+            </div>
+        );
     }
 
     componentDidMount() {
         this.updateDimensions();
-        window.addEventListener("resize", this.updateDimensions.bind(this));
+        window.addEventListener('resize', this.updateDimensions.bind(this));
     }
 
     componentWillUnmount() {
-        window.removeEventListener("resize", this.updateDimensions.bind(this));
+        window.removeEventListener('resize', this.updateDimensions.bind(this));
     }
 
-    rightArrow = (
-        <div className="rr-intro-arrow rr-intro-arrow-right">
-            <FontAwesome name="arrow-circle-right" size="2x" onClick={this.onRightArrowClick.bind(this)}/>
-        </div>
-    );
+    onRightArrowClick() {
+        this.setState(() => ({
+            visibleComponent: INTRO_STATE.ABOUT_ME,
+        }));
+    }
 
-    leftArrow = (
-        <div className="rr-intro-arrow rr-intro-arrow-left">
-            <FontAwesome name="arrow-circle-left" size="2x" onClick={this.onLeftArrowClick.bind(this)}/>
-        </div>
-    );
+    onLeftArrowClick() {
+        this.setState(() => ({
+            visibleComponent: INTRO_STATE.BLURB,
+        }));
+    }
+
+    updateDimensions() {
+        this.setState({ windowWidth: window.innerWidth });
+    }
 
     renderBlurb() {
         let style;
 
         if (this.state.windowWidth <= 960) {
             style = {
-                transform: this.state.visibleComponent === INTRO_STATE.BLURB ? 'translateX(0)' : 'translateX(-960px)'
+                transform: this.state.visibleComponent === INTRO_STATE.BLURB ? 'translateX(0)' : 'translateX(-960px)',
             };
-        }
-        else {
+        } else {
             style = {
-                transform: this.state.visibleComponent === INTRO_STATE.BLURB ? 'translateX(0)' : 'translateX(-100vw)'
+                transform: this.state.visibleComponent === INTRO_STATE.BLURB ? 'translateX(0)' : 'translateX(-100vw)',
             };
         }
 
         return (
             <div className="rr-intro-component-1" style={style}>
                 <div className="rr-intro-content">
-                    <Blurbpage/>
+                    <Blurbpage />
                     {this.rightArrow}
                 </div>
             </div>
         );
-    };
+    }
 
     renderAboutMe() {
         let style;
 
         if (this.state.windowWidth <= 960) {
             style = {
-                transform: this.state.visibleComponent === INTRO_STATE.ABOUT_ME ? 'translateX(-960px)' : 'translateX(0)'
+                transform: this.state.visibleComponent === INTRO_STATE.ABOUT_ME ? 'translateX(-960px)' : 'translateX(0)',
             };
-        }
-        else {
+        } else {
             style = {
-                transform: this.state.visibleComponent === INTRO_STATE.ABOUT_ME ? 'translateX(-100vw)' : 'translateX(0)'
+                transform: this.state.visibleComponent === INTRO_STATE.ABOUT_ME ? 'translateX(-100vw)' : 'translateX(0)',
             };
         }
 
         return (
             <div className="rr-intro-component-2" style={style}>
                 <div className="rr-intro-content">
-                    <AboutMe/>
+                    <AboutMe />
                     {this.leftArrow}
                 </div>
             </div>
@@ -109,7 +109,7 @@ class Intro extends React.Component {
                 {this.renderBlurb()}
                 {this.renderAboutMe()}
             </div>);
-    };
+    }
 }
 
 export default Intro;

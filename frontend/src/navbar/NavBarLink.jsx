@@ -12,14 +12,13 @@ const NavBarLink = (props) => {
                     height={props.imageHeight}
                     alt="logo"
                 />
-                {props.displayed}
             </a>);
     }
     if (props.text) {
         return (<a href={props.url} className="App-navbar-link" >{props.text}</a>);
     }
     return (<a href={props.url} className="App-navbar-link" >{props.object}</a>);
-}
+};
 
 NavBarLink.propTypes = {
     url: PropTypes.string.isRequired,

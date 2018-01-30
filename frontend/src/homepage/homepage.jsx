@@ -3,10 +3,8 @@ import FontAwesome from 'react-fontawesome';
 import './homepage.css';
 
 const Homepage = () => {
-
-    const arrowClickEvent = (e) => {
-        window.scroll({left:0, top: (window.innerHeight - 70), behavior: 'smooth'});
-
+    const arrowClickEvent = () => {
+        window.scroll({ left: 0, top: (window.innerHeight - 70), behavior: 'smooth' });
     };
 
     return (
@@ -15,7 +13,7 @@ const Homepage = () => {
                 <div className="rr-homepage-intro-text">
                     <div className="rr-homepage-intro-hi">HI! THIS WAY</div>
                     <div className="rr-homepage-arrow-circle-down">
-                        <FontAwesome name="arrow-circle-down" size="2x" onClick={arrowClickEvent}/>
+                        <FontAwesome name="arrow-circle-down" size="2x" onClick={arrowClickEvent} />
                     </div>
                 </div>
             </div>
