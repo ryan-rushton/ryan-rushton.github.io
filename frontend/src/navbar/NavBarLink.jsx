@@ -17,13 +17,13 @@ const NavBarLink = (props) => {
     if (props.text) {
         return (<a href={props.url} className="App-navbar-link" >{props.text}</a>);
     }
-    return (<a href={props.url} className="App-navbar-link" >{props.object}</a>);
+    return (<a href={props.url} className="App-navbar-link" >{props.jsxObject}</a>);
 };
 
 NavBarLink.propTypes = {
     url: PropTypes.string.isRequired,
     text: PropTypes.string,
-    object: PropTypes.object,
+    jsxObject: PropTypes.object,
     style: PropTypes.object,
     image: PropTypes.string,
     imageHeight: PropTypes.number,
@@ -32,7 +32,7 @@ NavBarLink.propTypes = {
 
 NavBarLink.defaultProps = {
     text: null,
-    object: null,
+    jsxObject: null,
     image: null,
     imageHeight: 0,
     imageWidth: 0,

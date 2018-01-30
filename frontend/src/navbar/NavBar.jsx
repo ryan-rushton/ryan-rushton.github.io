@@ -11,7 +11,7 @@ const NavBarActual = (props) => {
     const generateItem = item => (
         <NavBarItem
             text={item.text}
-            object={item.object}
+            jsxObject={item.jsxObject}
             url={item.url}
             submenu={item.submenu}
             styles={item.styles}
