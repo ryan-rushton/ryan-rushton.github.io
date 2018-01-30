@@ -4,8 +4,10 @@
   "private": true,
   "homepage": "https://rushton3179.github.io/personal-site",
   "dependencies": {
-    "d3": "^4.12.2",
+    "d3": "^4.13.0",
+    "eslint-config-react-app": "^2.1.0",
     "gh-pages": "^1.1.0",
+    "jest-cli": "^22.1.4",
     "prop-types": "^15.6.0",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
