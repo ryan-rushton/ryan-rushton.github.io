@@ -1,79 +1,57 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import NavBarLink from './NavBarLink';
-import NavBarItem from './NavBarItem';
-import navbarItems from './NavbarConfig';
+import FontAwesome from 'react-fontawesome';
+import logo from '../static/logo2.png';
 import './NavBar.css';
 
-const NavBarActual = (props) => {
-    const className = 'App-navbar';
+const LOGO_HEIGHT = 66;
+const LOGO_WIDTH = 138;
 
-    const generateItem = item => (
-        <NavBarItem
-            text={item.text}
-            jsxObject={item.jsxObject}
-            url={item.url}
-            submenu={item.submenu}
-            styles={item.styles}
-            key={item.keyBase}
-            keyBase={item.keyBase} />);
-
-    const generateHomeItem = homeItem => (
-        <div className="App-navbar-home">
-            <NavBarLink
-                key={`${homeItem.keyBase}-home`}
-                url={homeItem.url}
-                text={homeItem.text}
-                image={homeItem.image}
-                imageWidth={homeItem.imageWidth}
-                imageHeight={homeItem.imageHeight}
-                style={homeItem.styles}
+const NavBar = () => {
+    const generateLogoLink = () => (
+        <a href="/" className="rr-navbar-link rr-navbar-home-link">
+            <img
+                className="rr-navbar-logo"
+                src={logo}
+                width={LOGO_WIDTH}
+                height={LOGO_HEIGHT}
+                alt="logo"
             />
-        </div>);
+        </a>);
 
-    const generateItems = (data) => {
-        let styles = {};
-        let navItems;
-        let key;
+    const githubNavbar = (
+        <a href="https://github.com/rushton3179/personal-site" className="rr-navbar-link rr-navbar-right-link">
+            <div className="rr-navbar-github">
+                <FontAwesome name="github" size="2x" />
+            </div>
+        </a>);
 
-        if (data.image) {
-            navItems = generateHomeItem(data);
-            key = data.keyBase;
-            ({ styles } = data);
-        } else if (data instanceof Array) {
-            navItems = data.map((item, i) => generateItem(item, i));
-            key = data.map(item => item.keyBase).join('-');
-            data.forEach(item => Object.assign(styles, item.styles));
-        } else {
-            navItems = generateItem(data);
-            key = data.keyBase;
-            ({ styles } = data);
-        }
-        return (
-            <div className="rr-navbar-flexitem" style={styles} key={key}>
-                {navItems}
-            </div>);
-    };
-
-    const items = props.items.map(item => generateItems(item));
+    const mailNavbar = (
+        <a href="mailto:ryan.rushton79@gmail.com" className="rr-navbar-link rr-navbar-right-link">
+            <div className="rr-navbar-mail">
+                <FontAwesome name="envelope-o" size="2x" />
+            </div>
+        </a>);
 
     return (
-        <div className={className}>
-            <div className="App-navbar-content App-content">
-                {items}
+        <div className="rr-navbar">
+            <div className="rr-navbar-content">
+                <div className="rr-navbar-flexitem" />
+                <div className="rr-navbar-flexitem">
+                    <div className="rr-navbar-item">
+                        {generateLogoLink()}
+                    </div>
+                </div>
+                <div className="rr-navbar-flexitem">
+                    <div className="rr-navbar-item">
+                        <div className="rr-navbar-right-links">
+                            {githubNavbar}
+                            {mailNavbar}
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );
 };
-
-NavBarActual.propTypes = {
-    items: PropTypes.array,
-};
-
-NavBarActual.defaultProps = {
-    items: [],
-};
-
-const NavBar = () => <NavBarActual items={navbarItems} />;
 
 export default NavBar;

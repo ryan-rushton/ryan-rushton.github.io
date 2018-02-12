@@ -14,7 +14,6 @@ class Intro extends React.Component {
         super(props);
         this.state = {
             visibleComponent: INTRO_STATE.BLURB,
-            windowWidth: 960,
         };
 
         this.onRightArrowClick = this.onRightArrowClick.bind(this);
@@ -32,15 +31,6 @@ class Intro extends React.Component {
         );
     }
 
-    componentDidMount() {
-        this.updateDimensions();
-        window.addEventListener('resize', this.updateDimensions.bind(this));
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('resize', this.updateDimensions.bind(this));
-    }
-
     onRightArrowClick() {
         this.setState(() => ({
             visibleComponent: INTRO_STATE.ABOUT_ME,
@@ -53,27 +43,18 @@ class Intro extends React.Component {
         }));
     }
 
-    updateDimensions() {
-        this.setState({ windowWidth: window.innerWidth });
-    }
-
     renderBlurb() {
-        let style;
-
-        if (this.state.windowWidth <= 960) {
-            style = {
-                transform: this.state.visibleComponent === INTRO_STATE.BLURB ? 'translateX(0)' : 'translateX(-960px)',
-            };
-        } else {
-            style = {
-                transform: this.state.visibleComponent === INTRO_STATE.BLURB ? 'translateX(0)' : 'translateX(-100vw)',
-            };
-        }
+        const style = {
+            transform: this.state.visibleComponent === INTRO_STATE.BLURB ? 'translateX(0)' : 'translateX(-100vw)',
+        };
 
         return (
-            <div className="rr-intro-component-1" style={style}>
-                <div className="rr-intro-content">
+            <div className="rr-intro-component-common rr-intro-component-1" style={style}>
+                <div className="rr-intro-content-item" />
+                <div className="rr-intro-content-item">
                     <Blurbpage />
+                </div>
+                <div className="rr-intro-content-item">
                     {this.rightArrow}
                 </div>
             </div>
@@ -81,22 +62,17 @@ class Intro extends React.Component {
     }
 
     renderAboutMe() {
-        let style;
-
-        if (this.state.windowWidth <= 960) {
-            style = {
-                transform: this.state.visibleComponent === INTRO_STATE.ABOUT_ME ? 'translateX(-960px)' : 'translateX(0)',
-            };
-        } else {
-            style = {
-                transform: this.state.visibleComponent === INTRO_STATE.ABOUT_ME ? 'translateX(-100vw)' : 'translateX(0)',
-            };
-        }
+        const style = {
+            transform: this.state.visibleComponent === INTRO_STATE.ABOUT_ME ? 'translateX(-100vw)' : 'translateX(0)',
+        };
 
         return (
-            <div className="rr-intro-component-2" style={style}>
-                <div className="rr-intro-content">
+            <div className="rr-intro-component-common rr-intro-component-2" style={style}>
+                <div className="rr-intro-content-item" />
+                <div className="rr-intro-content-item">
                     <AboutMe />
+                </div>
+                <div className="rr-intro-content-item">
                     {this.leftArrow}
                 </div>
             </div>

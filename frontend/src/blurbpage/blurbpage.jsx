@@ -1,8 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import FontAwesome from 'react-fontawesome';
 import './blurbpage.css';
 
-const Blurbpage = () => {
+const Blurbpage = (props) => {
+    const className = `rr-blurbpage ${props.additionalClassNames}`;
+
     const hiText = (
         <div className="rr-blurb-hi">
             Hey, I&apos;m Ryan!
@@ -30,12 +33,20 @@ const Blurbpage = () => {
         </div>);
 
     return (
-        <div className="rr-blurbpage">
+        <div className={className}>
             <div className="rr-blurb-block">
                 {hiText}
                 {blurbText}
             </div>
         </div>);
+};
+
+Blurbpage.propTypes = {
+    additionalClassNames: PropTypes.string,
+};
+
+Blurbpage.defaultProps = {
+    additionalClassNames: '',
 };
 
 export default Blurbpage;
