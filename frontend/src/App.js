@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import Homepage from './homepage/homepage';
-import NavBar from './navbar/NavBar';
-import Intro from './Intro/intro';
+import Homepage from './Homepage/Homepage';
+import NavBar from './NavBar/NavBar';
+import Intro from './Introduction/Introduction';
 
 class App extends Component {
     render() {

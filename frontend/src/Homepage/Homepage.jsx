@@ -1,6 +1,6 @@
 import React from 'react';
 import FontAwesome from 'react-fontawesome';
-import './homepage.css';
+import './Homepage.css';
 
 const Homepage = () => {
     const arrowClickEvent = () => {
@@ -10,11 +10,9 @@ const Homepage = () => {
     return (
         <div className="rr-homepage">
             <div className="rr-homepage-intro-block">
-                <div className="rr-homepage-intro-text">
-                    <div className="rr-homepage-intro-hi">HI! THIS WAY</div>
-                    <div className="rr-homepage-arrow-circle-down">
-                        <FontAwesome name="arrow-circle-down" onClick={arrowClickEvent} />
-                    </div>
+                <div className="rr-homepage-intro-hi">HI! THIS WAY</div>
+                <div className="rr-homepage-arrow-circle-down">
+                    <FontAwesome name="arrow-circle-down" onClick={arrowClickEvent} />
                 </div>
             </div>
         </div>);

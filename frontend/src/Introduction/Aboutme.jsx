@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './aboutme.css';
+import './Aboutme.css';
 import myDayInfographic from '../static/myDayInfo.png';
 
 const AboutMe = (props) => {

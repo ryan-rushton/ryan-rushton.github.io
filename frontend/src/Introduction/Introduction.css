@@ -1,0 +1,43 @@
+.rr-intro-component {
+    background: #444;
+    color: white;
+    display: inline-flex;
+    font-size: 3vh;
+    overflow: hidden;
+    width: 100vw;
+}
+
+.rr-intro-component-common {
+    align-content: center;
+    align-items: center;
+    display: inline-flex;
+    min-width: 100vw;
+    overflow: hidden;
+    transition: All 1s ease;
+    width: 100vw;
+}
+
+.rr-intro-component-1 {
+    order: 0;
+}
+
+.rr-intro-component-2 {
+    order: 1;
+}
+
+.rr-intro-content-item {
+    flex-basis: 0;
+    flex-grow: 1;
+    order: 0;
+    margin: auto;
+}
+
+.rr-intro-content-item-double-grow {
+    flex-grow: 2;
+}
+
+.rr-intro-arrow {
+    color: white;
+    cursor: pointer;
+    padding-left: 5vw;
+}

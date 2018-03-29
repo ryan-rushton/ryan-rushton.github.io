@@ -1,0 +1,37 @@
+.rr-greeting {
+    height: 60vh;
+    margin: 5vh auto;
+}
+
+.rr-greeting-block {
+    font-family: "Open Sans", sans-serif;
+    margin: auto;
+    position: relative;
+}
+
+.rr-greeting-portrait-and-hi {
+    margin-bottom: 7vh;
+}
+
+.rr-greeting-portrait {
+    display: inline-block;
+    height: 10vh;
+    margin-right: 3vh;
+    vertical-align: middle;
+}
+
+.rr-greeting-hi {
+    display: inline-block;
+    font-family: 'Permanent Marker', 'Open Sans', sans-serif;
+    font-size: 5vh;
+    text-align: center;
+    vertical-align: middle;
+}
+.rr-greeting-text {
+    text-align: justify;
+    text-justify: auto;
+}
+
+.rr-greeting-text a {
+    color: #A189F0;
+}

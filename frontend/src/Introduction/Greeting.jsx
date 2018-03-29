@@ -1,13 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import FontAwesome from 'react-fontawesome';
-import './blurbpage.css';
+import './Greeting.css';
+import meCropped from '../static/me_cropped.png';
 
-const Blurbpage = (props) => {
-    const className = `rr-blurbpage ${props.additionalClassNames}`;
+const Greeting = (props) => {
+    const className = `rr-greeting ${props.additionalClassNames}`;
+
+    const roundPortrait = (
+        <img
+            className="rr-greeting-portrait"
+            src={meCropped}
+            alt="Woops the portrait didn't load"
+        />
+    );
 
     const hiText = (
-        <div className="rr-blurb-hi">
+        <div className="rr-greeting-hi">
             Hey, I&apos;m Ryan!
         </div>
     );
@@ -17,8 +26,8 @@ const Blurbpage = (props) => {
             <FontAwesome name="github" />
         </a>);
 
-    const blurbText = (
-        <div className="rr-blurb-text">
+    const greetingText = (
+        <div className="rr-greeting-text">
             Welcome to my site.
             <p>
                 Here you can
@@ -34,19 +43,22 @@ const Blurbpage = (props) => {
 
     return (
         <div className={className}>
-            <div className="rr-blurb-block">
-                {hiText}
-                {blurbText}
+            <div className="rr-greeting-block">
+                <div className="rr-greeting-portrait-and-hi">
+                    {roundPortrait}
+                    {hiText}
+                </div>
+                {greetingText}
             </div>
         </div>);
 };
 
-Blurbpage.propTypes = {
+Greeting.propTypes = {
     additionalClassNames: PropTypes.string,
 };
 
-Blurbpage.defaultProps = {
+Greeting.defaultProps = {
     additionalClassNames: '',
 };
 
-export default Blurbpage;
+export default Greeting;

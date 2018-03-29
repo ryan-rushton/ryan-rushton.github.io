@@ -1,8 +1,8 @@
 import React from 'react';
 import FontAwesome from 'react-fontawesome';
-import AboutMe from '../aboutme/aboutme';
-import Blurbpage from '../blurbpage/blurbpage';
-import './intro.css';
+import AboutMe from './Aboutme';
+import Blurbpage from './Greeting';
+import './Introduction.css';
 
 const INTRO_STATE = {
     BLURB: 'BLURB',
@@ -51,7 +51,7 @@ class Intro extends React.Component {
         return (
             <div className="rr-intro-component-common rr-intro-component-1" style={style}>
                 <div className="rr-intro-content-item" />
-                <div className="rr-intro-content-item">
+                <div className="rr-intro-content-item rr-intro-content-item-double-grow">
                     <Blurbpage />
                 </div>
                 <div className="rr-intro-content-item">
@@ -69,7 +69,7 @@ class Intro extends React.Component {
         return (
             <div className="rr-intro-component-common rr-intro-component-2" style={style}>
                 <div className="rr-intro-content-item" />
-                <div className="rr-intro-content-item">
+                <div className="rr-intro-content-item rr-intro-content-item-double-grow">
                     <AboutMe />
                 </div>
                 <div className="rr-intro-content-item">

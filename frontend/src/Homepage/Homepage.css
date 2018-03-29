@@ -12,18 +12,14 @@
     color: white;
     font-family: 'Open Sans', sans-serif;
     font-size: 5vw;
-    position: relative;
-    top: 25vh;
-}
-
-.rr-homepage-intro-text {
     margin: auto;
     position: relative;
     text-align: center;
+    top: 25vh;
 }
 
 .rr-homepage-intro-hi {
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Permanent Marker', 'Open Sans', sans-serif;
     text-align: center;
 }
 
