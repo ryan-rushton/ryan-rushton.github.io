@@ -1,10 +1,10 @@
 import React from 'react';
 import FontAwesome from 'react-fontawesome';
-import logo from '../static/logo2.png';
+import logo from '../static/RR_Logo_Outlined.svg';
 import './NavBar.css';
 
-const LOGO_HEIGHT = 66;
-const LOGO_WIDTH = 138;
+const LOGO_HEIGHT = 70;
+const LOGO_WIDTH = 100;
 
 const NavBar = () => {
     const generateLogoLink = () => (

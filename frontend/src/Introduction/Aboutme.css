@@ -10,7 +10,9 @@
 }
 
 .rr-infopraphic-title {
-    font-family: "Permanent Marker", 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-style: italic;
     font-size: 5vh;
     text-align: center;
 }
