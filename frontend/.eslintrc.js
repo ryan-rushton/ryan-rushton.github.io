@@ -7,6 +7,7 @@ module.exports = {
       "react/jsx-closing-bracket-location": ["disabled"],
     },
     "globals": {
-    "window": false
-  }
+        "window": false,
+        "Image": true
+    }
 };

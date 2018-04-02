@@ -1,21 +1,53 @@
-import React from 'react';
-import FontAwesome from 'react-fontawesome';
+import React, { Component } from 'react';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faArrowCircleDown } from '@fortawesome/fontawesome-free-solid';
+import Background from '../static/background.jpg';
+import Throbber from '../throbber/Throbber';
 import './Homepage.css';
 
-const Homepage = () => {
-    const arrowClickEvent = () => {
-        window.scroll({ left: 0, top: (window.innerHeight - 70), behavior: 'smooth' });
-    };
+class Homepage extends Component {
+    static arrowClickEvent() {
+        window.scroll({ left: 0, top: (window.innerHeight - 56), behavior: 'smooth' });
+    }
 
-    return (
-        <div className="rr-homepage">
-            <div className="rr-homepage-intro-block">
-                <div className="rr-homepage-intro-hi">HI! THIS WAY</div>
-                <div className="rr-homepage-arrow-circle-down">
-                    <FontAwesome name="arrow-circle-down" onClick={arrowClickEvent} />
-                </div>
+    constructor(props) {
+        super(props);
+        this.state = { imageHasLoaded: false };
+        this.createBgImage();
+    }
+
+    createBgImage() {
+        this.bgImage = new Image();
+        this.bgImage.onload = this.imageHasLoaded.bind(this);
+        this.bgImage.onerror = this.imageHasLoaded.bind(this);
+        this.bgImage.src = Background;
+    }
+
+    imageHasLoaded() {
+        this.setState({ imageHasLoaded: true });
+    }
+
+    render() {
+        if (this.state.imageHasLoaded) {
+            return (
+                <div className="rr-homepage" style={{ backgroundImage: `url(${this.bgImage.src})` }} >
+                    <div className="rr-homepage-intro-block">
+                        <div className="rr-homepage-intro-hi">HI! THIS WAY</div>
+                        <div className="rr-homepage-arrow-circle-down">
+                            <FontAwesomeIcon
+                                icon={faArrowCircleDown}
+                                onClick={Homepage.arrowClickEvent} />
+                        </div>
+                    </div>
+                </div>);
+        }
+
+        return (
+            <div className="rr-homepage">
+                {Throbber()}
             </div>
-        </div>);
-};
+        );
+    }
+}
 
 export default Homepage;

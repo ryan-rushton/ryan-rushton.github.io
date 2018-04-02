@@ -1,5 +1,6 @@
 import React from 'react';
-import FontAwesome from 'react-fontawesome';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faArrowCircleLeft, faArrowCircleRight } from '@fortawesome/fontawesome-free-solid';
 import AboutMe from './Aboutme';
 import Blurbpage from './Greeting';
 import './Introduction.css';
@@ -21,12 +22,12 @@ class Intro extends React.Component {
 
         this.rightArrow = (
             <div className="rr-intro-arrow rr-intro-arrow-right">
-                <FontAwesome name="arrow-circle-right" size="2x" onClick={this.onRightArrowClick} />
+                <FontAwesomeIcon icon={faArrowCircleRight} size="2x" onClick={this.onRightArrowClick} />
             </div>);
 
         this.leftArrow = (
             <div className="rr-intro-arrow rr-intro-arrow-left">
-                <FontAwesome name="arrow-circle-left" size="2x" onClick={this.onLeftArrowClick} />
+                <FontAwesomeIcon icon={faArrowCircleLeft} size="2x" onClick={this.onLeftArrowClick} />
             </div>
         );
     }

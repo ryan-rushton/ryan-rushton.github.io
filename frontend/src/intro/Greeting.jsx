@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import FontAwesome from 'react-fontawesome';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/fontawesome-free-brands';
 import './Greeting.css';
 import meCropped from '../static/me_cropped.png';
 
@@ -11,7 +12,7 @@ const Greeting = (props) => {
         <img
             className="rr-greeting-portrait"
             src={meCropped}
-            alt="Woops the portrait didn't load"
+            alt=""
         />
     );
 
@@ -23,7 +24,7 @@ const Greeting = (props) => {
 
     const github = (
         <a href="https://github.com/rushton3179/personal-site" >
-            <FontAwesome name="github" />
+            <FontAwesomeIcon icon={faGithub} />
         </a>);
 
     const greetingText = (

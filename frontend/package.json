@@ -4,11 +4,14 @@
   "private": true,
   "homepage": "https://rushton3179.github.io/personal-site",
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.5",
+    "@fortawesome/fontawesome-free-brands": "^5.0.9",
+    "@fortawesome/fontawesome-free-solid": "^5.0.9",
+    "@fortawesome/react-fontawesome": "0.0.18",
     "d3": "^4.13.0",
     "prop-types": "^15.6.1",
     "react": "^15.6.2",
-    "react-dom": "^15.6.2",
-    "react-fontawesome": "^1.6.1"
+    "react-dom": "^15.6.2"
   },
   "scripts": {
     "predeploy": "npm run build",

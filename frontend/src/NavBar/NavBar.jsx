@@ -1,5 +1,7 @@
 import React from 'react';
-import FontAwesome from 'react-fontawesome';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/fontawesome-free-solid';
+import { faGithub } from '@fortawesome/fontawesome-free-brands';
 import logo from '../static/RR_Logo_Outlined.svg';
 import './NavBar.css';
 
@@ -14,21 +16,21 @@ const NavBar = () => {
                 src={logo}
                 width={LOGO_WIDTH}
                 height={LOGO_HEIGHT}
-                alt="logo"
+                alt=""
             />
         </a>);
 
     const githubNavbar = (
         <a href="https://github.com/rushton3179/personal-site" className="rr-navbar-link rr-navbar-right-link">
             <div className="rr-navbar-github">
-                <FontAwesome name="github" size="1x" />
+                <FontAwesomeIcon icon={faGithub} />
             </div>
         </a>);
 
     const mailNavbar = (
         <a href="mailto:ryan.rushton79@gmail.com" className="rr-navbar-link rr-navbar-right-link">
             <div className="rr-navbar-mail">
-                <FontAwesome name="envelope-o" size="1x" />
+                <FontAwesomeIcon icon={faEnvelope} />
             </div>
         </a>);
 
