@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Acme|Open+Sans|Permanent+Marker|Roboto:700i|Roboto:700');
+@import url('https://fonts.googleapis.com/css?family=Acme|Open+Sans|Permanent+Marker|Roboto:700i|Roboto:700|Roboto|Permanent+Marker');
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
 .App {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }

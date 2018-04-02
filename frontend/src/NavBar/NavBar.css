@@ -1,6 +1,6 @@
 .rr-navbar {
     background: #222;
-    height: 70px;
+    height: 56px;
     min-width: 100vw;
     position: fixed;
     z-index: 100;
@@ -10,8 +10,7 @@
     background: #222;
     display: inline-flex;
     font-size: 16pt;
-    max-height: 70px;
-    min-height: 70px;
+    height: 56px;
     min-width: 100vw;
 }
 
@@ -29,6 +28,7 @@
 
 .rr-navbar-right-links {
     display: inline-flex;
+    font-size: 150%;
     min-width: calc(100vw/6);
 }
 

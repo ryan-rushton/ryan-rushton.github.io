@@ -10,9 +10,6 @@
 
 .rr-homepage-intro-block {
     color: white;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-style: italic;
     font-size: 5vw;
     margin: auto;
     position: relative;
@@ -21,7 +18,7 @@
 }
 
 .rr-homepage-intro-hi {
-    font-family: sans-serif;
+    font-family: 'Permanent Marker', sans-serif;
     text-align: center;
 }
 

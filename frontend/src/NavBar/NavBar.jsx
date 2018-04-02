@@ -3,8 +3,8 @@ import FontAwesome from 'react-fontawesome';
 import logo from '../static/RR_Logo_Outlined.svg';
 import './NavBar.css';
 
-const LOGO_HEIGHT = 70;
-const LOGO_WIDTH = 100;
+const LOGO_HEIGHT = 56;
+const LOGO_WIDTH = 80;
 
 const NavBar = () => {
     const generateLogoLink = () => (
@@ -21,14 +21,14 @@ const NavBar = () => {
     const githubNavbar = (
         <a href="https://github.com/rushton3179/personal-site" className="rr-navbar-link rr-navbar-right-link">
             <div className="rr-navbar-github">
-                <FontAwesome name="github" size="2x" />
+                <FontAwesome name="github" size="1x" />
             </div>
         </a>);
 
     const mailNavbar = (
         <a href="mailto:ryan.rushton79@gmail.com" className="rr-navbar-link rr-navbar-right-link">
             <div className="rr-navbar-mail">
-                <FontAwesome name="envelope-o" size="2x" />
+                <FontAwesome name="envelope-o" size="1x" />
             </div>
         </a>);
 
