@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import { faArrowCircleDown } from '@fortawesome/fontawesome-free-solid';
-import Background from '../static/background.jpg';
 import Throbber from '../throbber/Throbber';
+
+import Background from '../static/background.jpg';
 import './Homepage.css';
 
 class Homepage extends Component {

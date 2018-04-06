@@ -51,3 +51,7 @@
     flex-grow: 1;
     margin: auto;
 }
+
+.rr-navbar-github, .rr-navbar-mail {
+    padding-top: 3px;
+}
