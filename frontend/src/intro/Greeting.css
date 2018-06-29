@@ -9,7 +9,8 @@
 }
 
 .rr-greeting-portrait-and-hi {
-    margin-bottom: 7vh;
+    font-size: 0.8em;
+    margin-bottom: 3vh;
 }
 
 .rr-greeting-portrait {
@@ -24,15 +25,54 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-style: italic;
-    font-size: 1.7em;
     text-align: center;
     vertical-align: middle;
 }
+.rr-greeting-text-block {
+}
+
 .rr-greeting-text {
+    border-bottom: 2px solid white;
     text-align: justify;
     text-justify: auto;
 }
 
 .rr-greeting-text a {
     color: #A189F0;
+}
+
+.rr-tech-grid {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.rr-tech-grid-row {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.rr-tech-grid-item {
+    font-size: 1.2em;
+    margin: 10px;
+}
+
+/* Portrait and Landscape */
+@media screen
+  and (min-device-width: 769px) {
+      .rr-greeting {
+          font-size: 1.2em;
+      }
+
+      .rr-greeting-portrait-and-hi {
+          font-size:1.2em;
+          margin-bottom: 3vh;
+      }
+
+      .rr-tech-grid-item {
+          font-size: 2em;
+      }
 }

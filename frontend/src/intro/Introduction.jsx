@@ -50,7 +50,7 @@ class Intro extends React.Component {
         };
 
         return (
-            <div className="rr-intro-component-common rr-intro-component-1" style={style}>
+            <div className="rr-intro-component-common" style={style}>
                 <div className="rr-intro-content-item" />
                 <div className="rr-intro-content-item rr-intro-content-item-double-grow">
                     <Blurbpage />
@@ -68,7 +68,7 @@ class Intro extends React.Component {
         };
 
         return (
-            <div className="rr-intro-component-common rr-intro-component-2" style={style}>
+            <div className="rr-intro-component-common" style={style}>
                 <div className="rr-intro-content-item" />
                 <div className="rr-intro-content-item rr-intro-content-item-double-grow">
                     <AboutMe />

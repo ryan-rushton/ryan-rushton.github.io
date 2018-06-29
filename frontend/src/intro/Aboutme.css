@@ -11,8 +11,8 @@
 .rr-infopraphic-title {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
+    font-size: 2em;
     font-style: italic;
-    font-size: 1.7em;
     text-align: center;
 }
 
@@ -20,5 +20,5 @@
     display: block;
     margin: calc((3vw + 3vh)/2) auto auto auto;
     max-height: 500px;
-    height: calc((35vw + 35vh)/2);
+    height: calc((25vw + 25vh)/2);
 }

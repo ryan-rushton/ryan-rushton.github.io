@@ -1,16 +1,16 @@
+@import '../../styles/SiteStyles.css';
+
 .rr-navbar {
-    background: #222;
-    height: 56px;
+    background: var(--black);
+    height: 48px;
     min-width: 100vw;
     position: fixed;
     z-index: 100;
 }
 
 .rr-navbar-content {
-    background: #222;
     display: inline-flex;
-    font-size: 16pt;
-    height: 56px;
+    height: 48px;
     min-width: 100vw;
 }
 
@@ -19,17 +19,16 @@
     flex-basis: 0;
     flex-grow: 1;
     justify-content: center;
-    max-height: 70px;
 }
 
 .rr-navbar-item {
     display: inline-flex;
+    font-size: 1.5em;
 }
 
 .rr-navbar-right-links {
-    display: inline-flex;
-    font-size: 150%;
-    min-width: calc(100vw/6);
+    display: block;
+    min-width: calc(100vw/12);
 }
 
 .rr-navbar-link {
@@ -39,7 +38,13 @@
 }
 
 .rr-navbar-home-link {
+    margin: auto;
     padding: 0;
+}
+
+.rr-navbar-logo {
+    display: block;
+    margin: auto;
 }
 
 .rr-navbar-link:hover {
@@ -52,6 +57,18 @@
     margin: auto;
 }
 
-.rr-navbar-github, .rr-navbar-mail {
-    padding-top: 3px;
+/* Portrait and Landscape */
+@media screen
+    and (min-device-width: 769px) {
+        .rr-navbar {
+            height: 56px;
+        }
+
+        .rr-navbar-content {
+            height: 56px;
+        }
+
+        .rr-navbar-dropdown-header {
+            height: 56px;
+        }
 }

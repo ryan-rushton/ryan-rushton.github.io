@@ -1,12 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/fontawesome-free-brands';
+import { faGithub, faHtml5, faCss3, faJs, faReact, faPython, faSass, faApple, faAws, faDocker, faFontAwesome, faJava, faLinux, faUikit } from '@fortawesome/fontawesome-free-brands';
 import './Greeting.css';
 import meCropped from '../static/me_cropped.png';
 
 const Greeting = (props) => {
     const className = `rr-greeting ${props.additionalClassNames}`;
+
+    const techIcons = [[faJs, faReact, faJava, faHtml5, faCss3],
+        [faPython, faSass, faApple, faLinux, faAws],
+        [faDocker, faFontAwesome, faGithub, faUikit]];
 
     const roundPortrait = (
         <img
@@ -18,7 +22,7 @@ const Greeting = (props) => {
 
     const hiText = (
         <div className="rr-greeting-hi">
-            Hey, I&apos;m Ryan!
+            <h2>Hey, I&apos;m Ryan!</h2>
         </div>
     );
 
@@ -29,7 +33,7 @@ const Greeting = (props) => {
 
     const greetingText = (
         <div className="rr-greeting-text">
-            Welcome to my site.
+            Welcome.
             <p>
                 Here you can
                 expect to find a bunch of stuff I&apos;m into, including pics I have
@@ -42,6 +46,31 @@ const Greeting = (props) => {
             </p>
         </div>);
 
+    const buildGridItem = (faIcon) => (
+            <div className="rr-tech-grid-item" key={faIcon.iconName}>
+                <FontAwesomeIcon icon={faIcon} />
+            </div>
+    );
+
+    const buildGridRow = (row, index) => (
+            <div className="rr-tech-grid-row" key={`tech-grid-row-${index}`}>
+                {row.map(icon => buildGridItem(icon))}
+            </div>
+    );
+
+    const buildTechGrid = () => (
+            <div className="rr-tech-grid">
+                {techIcons.map((row, index) => buildGridRow(row, index))}
+            </div>
+    );
+
+    const stuffICanDo = (
+        <div className="rr-stuff-can-do">
+            <h4>Tech that I use:</h4>
+            {buildTechGrid()}
+        </div>
+    );
+
     return (
         <div className={className}>
             <div className="rr-greeting-block">
@@ -49,7 +78,10 @@ const Greeting = (props) => {
                     {roundPortrait}
                     {hiText}
                 </div>
-                {greetingText}
+                <div className="rr-greeting-text-block">
+                    {greetingText}
+                    {stuffICanDo}
+                </div>
             </div>
         </div>);
 };

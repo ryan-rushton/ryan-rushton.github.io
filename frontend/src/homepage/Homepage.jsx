@@ -8,7 +8,7 @@ import './Homepage.css';
 
 class Homepage extends Component {
     static arrowClickEvent() {
-        window.scroll({ left: 0, top: (window.innerHeight - 56), behavior: 'smooth' });
+        window.scroll({ left: 0, top: (Math.max(document.documentElement.clientHeight, window.innerHeight || 0)), behavior: 'smooth' });
     }
 
     constructor(props) {

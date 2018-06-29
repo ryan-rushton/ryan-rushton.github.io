@@ -1,8 +1,8 @@
+@import '../styles/SiteStyles.css';
 .rr-intro-component {
-    background: #444;
+    background-color: var(--black);
     color: white;
     display: inline-flex;
-    font-size: 1.5em;
     overflow: hidden;
     width: 100vw;
 }
@@ -11,18 +11,11 @@
     align-content: center;
     align-items: center;
     display: inline-flex;
+    overflow-x: hidden;
+    margin: 3vh auto 3vh auto;
     min-width: 100vw;
-    overflow: hidden;
     transition: All 1s ease;
     width: 100vw;
-}
-
-.rr-intro-component-1 {
-    order: 0;
-}
-
-.rr-intro-component-2 {
-    order: 1;
 }
 
 .rr-intro-content-item {
@@ -33,11 +26,20 @@
 }
 
 .rr-intro-content-item-double-grow {
-    flex-grow: 2;
+    flex-grow: 3;
 }
 
 .rr-intro-arrow {
     color: white;
     cursor: pointer;
     padding-left: 5vw;
+}
+
+/* Portrait and Landscape */
+@media screen
+    and (min-device-width: 769px) {
+        .rr-intro-content-item-double-grow {
+            flex-grow: 2;
+        }
+
 }

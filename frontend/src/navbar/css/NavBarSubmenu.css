@@ -1,0 +1,58 @@
+@import '../../styles/SiteStyles.css';
+
+.rr-navbar-dropdown-header {
+    background: var(--black);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 48px;
+    z-index: 100;
+}
+
+.rr-navbar-dropdown {
+    background: var(--black);
+    opacity: 0.01;
+    border-radius: 0 0 5px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateY(-100%);
+    z-index: 99;
+}
+
+.rr-navbar-dropdown-enter {
+    opacity: 0.01;
+    transform: translateY(-100%);
+}
+
+.rr-navbar-dropdown-enter-active {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: opacity 0.01ms, transform 250ms ease-out;
+}
+
+.rr-navbar-dropdown-enter-done {
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+.rr-navbar-dropdown-exit {
+    opacity: 1;
+    transform: translateY(0%);
+}
+.rr-navbar-dropdown-exit-active {
+    opacity: 1;
+    transform: translateY(-100%);
+    transition: opacity 0.01ms, transform 250ms ease-out;
+}
+
+.rr-navbar-dropdown-exit-done {
+    opacity: 0.01;
+    transform: translateY(-100%);
+}
+
+.rr-navbar-github, .rr-navbar-mail, .rr-navbar-bars {
+    margin: auto;
+    padding-top: 3px;
+}
