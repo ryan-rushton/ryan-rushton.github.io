@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { CSSTransition } from 'react-transition-group';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import { faBars, faEnvelope } from '@fortawesome/fontawesome-free-solid';
@@ -48,5 +49,11 @@ const NavBarSubmenuPresentation = (props) => (
         </CSSTransition>
     </div>
 );
+
+NavBarSubmenuPresentation.propTypes = {
+    dropdownVisible: PropTypes.bool.isRequired,
+    onMouseHover: PropTypes.func.isRequired,
+    onMouseLeave: PropTypes.func.isRequired,
+}
 
 export default NavBarSubmenuPresentation;

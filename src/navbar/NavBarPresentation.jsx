@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import NavBarSubmenuPresentation from './NavBarSubmenuPresentation';
 import './css/NavBar.css';
 
@@ -36,5 +37,14 @@ const NavBarPresentation = (props) => (
         </div>
     </div>
 );
+
+NavBarPresentation.propTypes = {
+    logo: PropTypes.node.isRequired,
+    logoHeight: PropTypes.number.isRequired,
+    logoWidth: PropTypes.number.isRequired,
+    dropdownVisible: PropTypes.bool.isRequired,
+    onSubmenuMouseHover: PropTypes.func.isRequired,
+    onSubmenuMouseLeave: PropTypes.func.isRequired,
+}
 
 export default NavBarPresentation;
