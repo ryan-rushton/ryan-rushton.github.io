@@ -1,4 +1,4 @@
-@import '../../styles/SiteStyles.css';
+@import "../../styles/SiteStyles.css";
 
 .rr-navbar {
     background: var(--black);
@@ -28,7 +28,8 @@
 
 .rr-navbar-right-links {
     display: block;
-    min-width: calc(100vw/12);
+    max-width: 140px;
+    width: calc(100vw / 12);
 }
 
 .rr-navbar-link {
@@ -58,17 +59,20 @@
 }
 
 /* Portrait and Landscape */
-@media screen
-    and (min-device-width: 769px) {
-        .rr-navbar {
-            height: 56px;
-        }
+@media screen and (min-device-width: 769px) {
+    .rr-navbar {
+        height: 56px;
+    }
 
-        .rr-navbar-content {
-            height: 56px;
-        }
+    .rr-navbar-content {
+        height: 56px;
+    }
 
-        .rr-navbar-dropdown-header {
-            height: 56px;
-        }
+    .rr-navbar-dropdown-header {
+        height: 56px;
+    }
+
+    .rr-navbar-right-links {
+        width: calc(100vw / 6);
+    }
 }

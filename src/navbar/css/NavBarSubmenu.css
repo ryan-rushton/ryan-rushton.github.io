@@ -1,4 +1,4 @@
-@import '../../styles/SiteStyles.css';
+@import "../../styles/SiteStyles.css";
 
 .rr-navbar-dropdown-header {
     background: var(--black);
@@ -52,7 +52,9 @@
     transform: translateY(-100%);
 }
 
-.rr-navbar-github, .rr-navbar-mail, .rr-navbar-bars {
+.rr-navbar-github,
+.rr-navbar-mail,
+.rr-navbar-bars {
     margin: auto;
     padding-top: 3px;
 }

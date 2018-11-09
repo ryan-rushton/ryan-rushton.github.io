@@ -16,7 +16,7 @@
 }
 
 .rr-homepage-intro-hi {
-    font-family: 'Permanent Marker', sans-serif;
+    font-family: "Permanent Marker", sans-serif;
     font-weight: 700;
     font-style: italic;
     text-align: center;
@@ -27,12 +27,11 @@
 }
 
 /* Portrait and Landscape */
-@media screen
-  and (min-device-width: 769px) {
-      .rr-homepage-intro-block {
-          color: white;
-          font-size: 4em;
-          margin: 30vh auto auto auto;
-          text-align: center;
-      }
+@media screen and (min-device-width: 769px) {
+    .rr-homepage-intro-block {
+        color: white;
+        font-size: 4em;
+        margin: 30vh auto auto auto;
+        text-align: center;
+    }
 }

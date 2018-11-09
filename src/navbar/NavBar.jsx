@@ -1,45 +1,38 @@
-import React from 'react';
-import NavBarPresentation from './NavBarPresentation';
-import logo from '../static/RR_Logo_Outlined.svg';
+import React from "react";
+import NavBarPresentation from "./NavBarPresentation";
+import logo from "../static/RR_Logo_Outlined.svg";
 
 const LOGO_HEIGHT = 48;
 const LOGO_WIDTH = 70;
 
 class NavBar extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
         this.state = {
-            dropdownVisible: false,
-        }
+            dropdownVisible: false
+        };
 
-        this.onSubmenuMouseHover = this.onSubmenuMouseHover.bind(this);
-        this.onSubmenuMouseLeave = this.onSubmenuMouseLeave.bind(this);
+        this.onDropdownClick = this.onDropdownClick.bind(this);
     }
 
-    onSubmenuMouseHover() {
-        this.setState(() => ({
-            dropdownVisible: true,
-        }));
-    }
-
-    onSubmenuMouseLeave() {
-        this.setState(() => ({
-            dropdownVisible: false,
+    onDropdownClick() {
+        this.setState(prevState => ({
+            dropdownVisible: !prevState.dropdownVisible
         }));
     }
 
     render() {
+        const { dropdownVisible } = this.state;
         return (
             <NavBarPresentation
-                dropdownVisible={this.state.dropdownVisible}
+                dropdownVisible={dropdownVisible}
                 logo={logo}
                 logoHeight={LOGO_HEIGHT}
                 logoWidth={LOGO_WIDTH}
-                onSubmenuMouseHover={this.onSubmenuMouseHover}
-                onSubmenuMouseLeave={this.onSubmenuMouseLeave}
+                onDropdownClick={this.onDropdownClick}
             />
         );
     }
-};
+}
 
 export default NavBar;

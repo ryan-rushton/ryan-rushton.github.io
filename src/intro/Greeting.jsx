@@ -1,75 +1,95 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import { faGithub, faHtml5, faCss3, faJs, faReact, faPython, faSass, faApple, faAws, faDocker, faFontAwesome, faJava, faLinux, faUikit } from '@fortawesome/fontawesome-free-brands';
-import './Greeting.css';
-import meCropped from '../static/me_cropped.png';
+import React from "react";
+import PropTypes from "prop-types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faGithub,
+    faHtml5,
+    faCss3,
+    faJs,
+    faReact,
+    faPython,
+    faSass,
+    faApple,
+    faAws,
+    faDocker,
+    faFontAwesome,
+    faJava,
+    faLinux,
+    faUikit
+} from "@fortawesome/fontawesome-free-brands";
+import "./Greeting.css";
+import meCropped from "../static/me_cropped.png";
 
-const Greeting = (props) => {
-    const className = `rr-greeting ${props.additionalClassNames}`;
+const roundPortrait = (
+    <img className="rr-greeting-portrait" src={meCropped} alt="" />
+);
 
-    const techIcons = [[faJs, faReact, faJava, faHtml5, faCss3],
-        [faPython, faSass, faApple, faLinux, faAws],
-        [faDocker, faFontAwesome, faGithub, faUikit]];
+const hiText = (
+    <div className="rr-greeting-hi">
+        <h2>Hey, I&apos;m Ryan!</h2>
+    </div>
+);
 
-    const roundPortrait = (
-        <img
-            className="rr-greeting-portrait"
-            src={meCropped}
-            alt=""
-        />
-    );
+const github = (
+    <a
+        href="https://github.com/rushton3179/personal-site"
+        className="rr-greeting-github-link"
+    >
+        <FontAwesomeIcon icon={faGithub} />
+    </a>
+);
 
-    const hiText = (
-        <div className="rr-greeting-hi">
-            <h2>Hey, I&apos;m Ryan!</h2>
-        </div>
-    );
+const techIcons = [
+    [faJs, faReact, faJava, faHtml5, faCss3],
+    [faPython, faSass, faApple, faLinux, faAws],
+    [faDocker, faFontAwesome, faGithub, faUikit]
+];
 
-    const github = (
-        <a href="https://github.com/rushton3179/personal-site" >
-            <FontAwesomeIcon icon={faGithub} />
-        </a>);
+const greetingText = (
+    <div className="rr-greeting-text">
+        <p>
+            Here you can expect to find a bunch of stuff I&apos;m into,
+            including pics I have taken while on holiday, little apps I have
+            made for things I find interesting and of course how to get in
+            touch.
+        </p>
+        <p>
+            Please check out my
+            {github}
+            if you want to see how this site works or a bunch on half finished
+            (or started) projects.
+        </p>
+    </div>
+);
 
-    const greetingText = (
-        <div className="rr-greeting-text">
-            Welcome.
-            <p>
-                Here you can
-                expect to find a bunch of stuff I&apos;m into, including pics I have
-                taken while on holiday, little apps I have made for things I
-                find interesting and of course how to get in touch.
-            </p>
-            <p>
-                Please check out my {github} if you want to see how this
-                site works or a bunch on half finished (or started) projects.
-            </p>
-        </div>);
+const buildGridItem = faIcon => (
+    <div className="rr-tech-grid-item" key={faIcon.iconName}>
+        <FontAwesomeIcon icon={faIcon} />
+    </div>
+);
 
-    const buildGridItem = (faIcon) => (
-            <div className="rr-tech-grid-item" key={faIcon.iconName}>
-                <FontAwesomeIcon icon={faIcon} />
-            </div>
-    );
+const buildGridRow = (row, index) => (
+    <div className="rr-tech-grid-row" key={`tech-grid-row-${index}`}>
+        {row.map(icon => buildGridItem(icon))}
+    </div>
+);
 
-    const buildGridRow = (row, index) => (
-            <div className="rr-tech-grid-row" key={`tech-grid-row-${index}`}>
-                {row.map(icon => buildGridItem(icon))}
-            </div>
-    );
+const buildTechGrid = () => (
+    <div className="rr-tech-grid">
+        {techIcons.map((row, index) => buildGridRow(row, index))}
+    </div>
+);
 
-    const buildTechGrid = () => (
-            <div className="rr-tech-grid">
-                {techIcons.map((row, index) => buildGridRow(row, index))}
-            </div>
-    );
+const stuffICanDo = (
+    <div className="rr-stuff-can-do">
+        <h4>Tech that I use:</h4>
+        {buildTechGrid()}
+    </div>
+);
 
-    const stuffICanDo = (
-        <div className="rr-stuff-can-do">
-            <h4>Tech that I use:</h4>
-            {buildTechGrid()}
-        </div>
-    );
+const Greeting = props => {
+    const { additionalClassNames } = props;
+    const className = `rr-greeting ${additionalClassNames}`;
 
     return (
         <div className={className}>
@@ -83,15 +103,16 @@ const Greeting = (props) => {
                     {stuffICanDo}
                 </div>
             </div>
-        </div>);
+        </div>
+    );
 };
 
 Greeting.propTypes = {
-    additionalClassNames: PropTypes.string,
+    additionalClassNames: PropTypes.string
 };
 
 Greeting.defaultProps = {
-    additionalClassNames: '',
+    additionalClassNames: ""
 };
 
 export default Greeting;

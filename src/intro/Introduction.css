@@ -1,4 +1,4 @@
-@import '../styles/SiteStyles.css';
+@import "../styles/SiteStyles.css";
 .rr-intro-component {
     background-color: var(--black);
     color: white;
@@ -36,10 +36,8 @@
 }
 
 /* Portrait and Landscape */
-@media screen
-    and (min-device-width: 769px) {
-        .rr-intro-content-item-double-grow {
-            flex-grow: 2;
-        }
-
+@media screen and (min-device-width: 769px) {
+    .rr-intro-content-item-double-grow {
+        flex-grow: 2;
+    }
 }
