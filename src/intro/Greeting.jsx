@@ -2,22 +2,24 @@ import React from "react";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-    faGithub,
-    faHtml5,
-    faCss3,
-    faJs,
-    faReact,
-    faPython,
-    faSass,
     faApple,
+    faAtlassian,
     faAws,
+    faCss3,
     faDocker,
     faFontAwesome,
+    faGithub,
+    faHtml5,
     faJava,
+    faJs,
     faLinux,
+    faMicrosoft,
+    faPython,
+    faReact,
+    faSass,
     faUikit
-} from "@fortawesome/fontawesome-free-brands";
-import "./Greeting.css";
+} from "@fortawesome/free-brands-svg-icons";
+import "./Greeting.scss";
 import meCropped from "../static/me_cropped.png";
 
 const roundPortrait = (
@@ -40,9 +42,28 @@ const github = (
 );
 
 const techIcons = [
-    [faJs, faReact, faJava, faHtml5, faCss3],
-    [faPython, faSass, faApple, faLinux, faAws],
-    [faDocker, faFontAwesome, faGithub, faUikit]
+    [
+        { icon: faJs, title: "JS" },
+        { icon: faReact, title: "React" },
+        { icon: faJava, title: "Java" },
+        { icon: faHtml5, title: "HTML" },
+        { icon: faCss3, title: "CSS" }
+    ],
+    [
+        { icon: faPython, title: "Python" },
+        { icon: faSass, title: "Sass" },
+        { icon: faApple, title: "Apple" },
+        { icon: faLinux, title: "Linux" },
+        { icon: faMicrosoft, title: "VS Code\nMSSQL" }
+    ],
+    [
+        { icon: faDocker, title: "Docker" },
+        { icon: faAws, title: "AWS" },
+        { icon: faFontAwesome, title: "Font Awesome" },
+        { icon: faGithub, title: "GitHub" },
+        { icon: faUikit, title: "UIKit" }
+    ],
+    [{ icon: faAtlassian, title: "Jira\nBitBucket\nConfluence\nSourceTree" }]
 ];
 
 const greetingText = (
@@ -62,9 +83,13 @@ const greetingText = (
     </div>
 );
 
-const buildGridItem = faIcon => (
-    <div className="rr-tech-grid-item" key={faIcon.iconName}>
-        <FontAwesomeIcon icon={faIcon} />
+const buildGridItem = iconSet => (
+    <div
+        className="rr-tech-grid-item"
+        key={iconSet.icon.iconName}
+        title={iconSet.title}
+    >
+        <FontAwesomeIcon icon={iconSet.icon} />
     </div>
 );
 

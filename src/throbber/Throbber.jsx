@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../static/RR_Logo_Outlined.svg";
-import "./Throbber.css";
+import "./Throbber.scss";
 
 const Throbber = () => (
     <div className="rr-throbber">

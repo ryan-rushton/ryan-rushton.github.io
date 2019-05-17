@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import './App.css';
-import Homepage from './homepage/Homepage';
-import NavBar from './navbar/NavBar';
-import Intro from './intro/Introduction';
+import React, { Component } from "react";
+import "./App.scss";
+import Homepage from "./homepage/Homepage";
+import NavBar from "./navbar/NavBar";
+import Intro from "./intro/Introduction";
 
 class App extends Component {
     render() {
@@ -14,6 +14,6 @@ class App extends Component {
             </div>
         );
     }
-};
+}
 
 export default App;

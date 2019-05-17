@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import { CSSTransition } from "react-transition-group";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faEnvelope } from "@fortawesome/fontawesome-free-solid";
-import { faGithub } from "@fortawesome/fontawesome-free-brands";
-import "./css/NavBarSubmenu.css";
+import { faBars, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import "./css/NavBarSubmenu.scss";
 
 const renderGithubIcon = () => (
     <div className="rr-navbar-github rr-navbar-link">

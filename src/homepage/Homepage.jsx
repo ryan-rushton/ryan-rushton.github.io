@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowCircleDown } from "@fortawesome/fontawesome-free-solid";
+import { faArrowCircleDown } from "@fortawesome/free-solid-svg-icons";
 import Throbber from "../throbber/Throbber";
 
 import Background from "../static/background.jpg";
-import "./Homepage.css";
+import "./Homepage.scss";
 
 class Homepage extends Component {
     static arrowClickEvent() {

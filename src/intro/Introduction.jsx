@@ -3,10 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faArrowCircleLeft,
     faArrowCircleRight
-} from "@fortawesome/fontawesome-free-solid";
-import AboutMe from "./Aboutme";
+} from "@fortawesome/free-solid-svg-icons";
+import TheSystemInfo from "./TheSystemInfo";
 import Blurbpage from "./Greeting";
-import "./Introduction.css";
+import "./Introduction.scss";
 
 const INTRO_STATE = {
     BLURB: "BLURB",
@@ -83,7 +83,7 @@ class Intro extends React.Component {
         );
     }
 
-    renderAboutMe() {
+    renderTheSystemInfo() {
         const style = {
             transform: this.getTransform()
         };
@@ -92,7 +92,7 @@ class Intro extends React.Component {
             <div className="rr-intro-component-common" style={style}>
                 <div className="rr-intro-content-item" />
                 <div className="rr-intro-content-item rr-intro-content-item-double-grow">
-                    <AboutMe />
+                    <TheSystemInfo />
                 </div>
                 <div className="rr-intro-content-item">{this.leftArrow}</div>
             </div>
@@ -103,7 +103,7 @@ class Intro extends React.Component {
         return (
             <div className="rr-intro-component">
                 {this.renderBlurb()}
-                {this.renderAboutMe()}
+                {this.renderTheSystemInfo()}
             </div>
         );
     }

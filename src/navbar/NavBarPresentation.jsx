@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import NavBarSubmenuPresentation from "./NavBarSubmenuPresentation";
-import "./css/NavBar.css";
+import "./css/NavBar.scss";
 
 const generateLogoLink = (logo, height, width) => (
     <a href="/" className="rr-navbar-link rr-navbar-home-link">
