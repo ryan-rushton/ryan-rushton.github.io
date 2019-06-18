@@ -48,7 +48,11 @@ const greetingText = (
 const buildGridRow = (row, index) => (
     <div className="rr-tech-grid-row" key={`tech-grid-row-${index}`}>
         {row.map(iconSet => (
-            <Icon icon={iconSet.icon} text={iconSet.text} />
+            <Icon
+                icon={iconSet.icon}
+                key={iconSet.icon.iconName}
+                text={iconSet.text}
+            />
         ))}
     </div>
 );
