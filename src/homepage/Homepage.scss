@@ -1,8 +1,10 @@
+@import "../styles/SiteStyles.scss";
+
 .rr-homepage {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: #222;
+    background-color: $black;
     display: flex;
     height: 100vh;
     width: 100vw;

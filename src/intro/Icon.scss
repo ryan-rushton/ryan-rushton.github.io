@@ -1,0 +1,30 @@
+@import "../styles/SiteStyles.scss";
+
+.rr-tech-icon-set {
+    .rr-tech-icon {
+        display: inline-block;
+        font-size: 1.2em;
+        margin: 10px;
+        position: relative;
+    }
+
+    .rr-tech-icon-popup {
+        background-color: $black;
+        border: 1px solid white;
+        border-radius: 3px;
+        display: inline-block;
+        font-size: 0.8em;
+        margin: 10px;
+        max-width: 20vw;
+        min-width: 20vw;
+        padding: 5px;
+        position: absolute;
+        z-index: 2;
+    }
+
+    @media screen and (min-device-width: 769px) {
+        .rr-tech-icon {
+            font-size: 2em;
+        }
+    }
+}

@@ -1,7 +1,7 @@
 @import "../../styles/SiteStyles.scss";
 
 .rr-navbar-dropdown-header {
-    background: var(--black);
+    background: $black;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -11,7 +11,7 @@
 }
 
 .rr-navbar-dropdown {
-    background: var(--black);
+    background: $black;
     opacity: 0.01;
     border-radius: 0 0 5px 5px;
     display: flex;
