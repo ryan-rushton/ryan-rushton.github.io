@@ -1,4 +1,4 @@
-@import "../styles/SiteStyles.scss";
+@import "../../styles/SiteStyles.scss";
 
 .rr-tech-icon-set {
     .rr-tech-icon {
@@ -15,8 +15,7 @@
         display: inline-block;
         font-size: 0.8em;
         margin: 10px;
-        max-width: 20vw;
-        min-width: 20vw;
+        width: 20vw;
         padding: 5px;
         position: absolute;
         z-index: 2;

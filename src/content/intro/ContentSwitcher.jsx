@@ -6,14 +6,14 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import TheSystemInfo from "./TheSystemInfo";
 import Blurbpage from "./Greeting";
-import "./Introduction.scss";
+import "./ContentSwitcher.scss";
 
 const INTRO_STATE = {
     BLURB: "BLURB",
     ABOUT_ME: "ABOUT_ME"
 };
 
-class Intro extends React.Component {
+class ContentSwitcher extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -24,7 +24,7 @@ class Intro extends React.Component {
         this.onLeftArrowClick = this.onLeftArrowClick.bind(this);
 
         this.rightArrow = (
-            <div className="rr-intro-arrow rr-intro-arrow-right">
+            <div className="rr-content-switcher-arrow rr-content-switcher-arrow-right">
                 <FontAwesomeIcon
                     icon={faArrowCircleRight}
                     size="2x"
@@ -34,7 +34,7 @@ class Intro extends React.Component {
         );
 
         this.leftArrow = (
-            <div className="rr-intro-arrow rr-intro-arrow-left">
+            <div className="rr-content-switcher-arrow rr-content-switcher-arrow-left">
                 <FontAwesomeIcon
                     icon={faArrowCircleLeft}
                     size="2x"
@@ -73,12 +73,14 @@ class Intro extends React.Component {
         };
 
         return (
-            <div className="rr-intro-component-common" style={style}>
-                <div className="rr-intro-content-item" />
-                <div className="rr-intro-content-item rr-intro-content-item-double-grow">
+            <div className="rr-content-switcher-component-common" style={style}>
+                <div className="rr-content-switcher-content-item" />
+                <div className="rr-content-switcher-content-item rr-intro-content-item-double-grow">
                     <Blurbpage />
                 </div>
-                <div className="rr-intro-content-item">{this.rightArrow}</div>
+                <div className="rr-content-switcher-content-item">
+                    {this.rightArrow}
+                </div>
             </div>
         );
     }
@@ -89,19 +91,21 @@ class Intro extends React.Component {
         };
 
         return (
-            <div className="rr-intro-component-common" style={style}>
-                <div className="rr-intro-content-item" />
-                <div className="rr-intro-content-item rr-intro-content-item-double-grow">
+            <div className="rr-content-switcher-component-common" style={style}>
+                <div className="rr-content-switcher-content-item" />
+                <div className="rr-content-switcher-content-item rr-intro-content-switcher-item-double-grow">
                     <TheSystemInfo />
                 </div>
-                <div className="rr-intro-content-item">{this.leftArrow}</div>
+                <div className="rr-content-switcher-content-item">
+                    {this.leftArrow}
+                </div>
             </div>
         );
     }
 
     render() {
         return (
-            <div className="rr-intro-component">
+            <div className="rr-content-switcher-component">
                 {this.renderBlurb()}
                 {this.renderTheSystemInfo()}
             </div>
@@ -109,4 +113,4 @@ class Intro extends React.Component {
     }
 }
 
-export default Intro;
+export default ContentSwitcher;

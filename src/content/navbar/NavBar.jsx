@@ -1,11 +1,11 @@
-import React from "react";
+import React, { Component } from "react";
 import NavBarPresentation from "./NavBarPresentation";
 import logo from "../static/RR_Logo_Outlined.svg";
 
 const LOGO_HEIGHT = 48;
 const LOGO_WIDTH = 70;
 
-class NavBar extends React.Component {
+class NavBar extends Component {
     constructor(props) {
         super(props);
         this.state = {

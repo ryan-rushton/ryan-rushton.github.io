@@ -22,17 +22,17 @@ const techIcons = [
         {
             icon: faJs,
             text:
-                "JS. What more can I say, every engineer that loves frontend loves JS."
+                "JS. What more can I say, every engineer that loves frontend, loves JS."
         },
         {
             icon: faReact,
             text:
-                "React. My preference of the modern JS frameworkds. Components make things so much tidier."
+                "React. My preference of the modern JS frameworkds. Components make things so much neater."
         },
         {
             icon: faJava,
             text:
-                "Java. The backend language that powers enterprise. I use this at work and it pays my bills."
+                "Java. The backend language that powers enterprise. I use this for work, and it pays my bills."
         },
         { icon: faHtml5, text: "HTML. Can't build websites without it." },
         {
@@ -59,7 +59,7 @@ const techIcons = [
         {
             icon: faLinux,
             text:
-                "Linux. The power of linux is amazing. It's so flexible and I use it everyday but I will never know it's darkest secrets."
+                "Linux. The power of linux is amazing. It's so flexible and I use it everyday, but I will never know it's darkest secrets."
         },
         {
             icon: faMicrosoft,

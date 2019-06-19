@@ -1,19 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import "./App.scss";
-import Homepage from "./homepage/Homepage";
-import NavBar from "./navbar/NavBar";
-import Intro from "./intro/Introduction";
+import Landing from "./content/Landing";
 
-class App extends Component {
-    render() {
-        return (
-            <div>
-                <NavBar />
-                <Homepage />
-                <Intro />
-            </div>
-        );
-    }
-}
+const App = () => <Landing />;
 
 export default App;

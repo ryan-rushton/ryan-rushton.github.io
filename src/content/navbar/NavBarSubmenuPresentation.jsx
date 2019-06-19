@@ -4,7 +4,7 @@ import { CSSTransition } from "react-transition-group";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import "./css/NavBarSubmenu.scss";
+import "./NavBarSubmenu.scss";
 
 const renderGithubIcon = () => (
     <div className="rr-navbar-github rr-navbar-link">

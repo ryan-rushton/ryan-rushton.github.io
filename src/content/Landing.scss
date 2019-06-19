@@ -1,6 +1,6 @@
-@import "../styles/SiteStyles.scss";
+@import "./styles/SiteStyles.scss";
 
-.rr-homepage {
+.rr-landing {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -10,27 +10,27 @@
     width: 100vw;
 }
 
-.rr-homepage-intro-block {
+.rr-landing-intro-block {
     color: white;
     font-size: 2.5em;
     margin: 30vh auto auto auto;
     text-align: center;
 }
 
-.rr-homepage-intro-hi {
+.rr-landing-intro-hi {
     font-family: "Permanent Marker", sans-serif;
     font-weight: 700;
     font-style: italic;
     text-align: center;
 }
 
-.rr-homepage-arrow-circle-down .fa-arrow-circle-down {
+.rr-landing-arrow-circle-down .fa-arrow-circle-down {
     cursor: pointer;
 }
 
 /* Portrait and Landscape */
 @media screen and (min-device-width: 769px) {
-    .rr-homepage-intro-block {
+    .rr-landing-intro-block {
         color: white;
         font-size: 4em;
         margin: 30vh auto auto auto;

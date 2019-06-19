@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-import Icon from "./Icon";
+import Icon from "./icon/Icon";
 import techIcons from "./TechIcons";
 
 import "./Greeting.scss";
@@ -22,7 +22,7 @@ const hiText = (
 const github = (
     <a
         href="https://github.com/rushton3179/personal-site"
-        className="rr-greeting-github-link"
+        className="rr-site-link rr-greeting-github-link"
     >
         <FontAwesomeIcon icon={faGithub} />
     </a>
