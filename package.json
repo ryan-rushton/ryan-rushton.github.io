@@ -2,7 +2,7 @@
     "name": "personal-site",
     "version": "1.0.0",
     "private": true,
-    "homepage": "https://rushton3179.github.io/personal-site",
+    "homepage": "https://ryan-rushton.github.io",
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^1.2.28",
         "@fortawesome/free-brands-svg-icons": "^5.13.0",
