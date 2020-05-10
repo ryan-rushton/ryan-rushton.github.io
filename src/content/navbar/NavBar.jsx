@@ -1,38 +1,47 @@
-import React, { Component } from "react";
-import NavBarPresentation from "./NavBarPresentation";
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+
+import styles from "./NavBar.module.scss";
 import logo from "../static/RR_Logo_Outlined.svg";
 
 const LOGO_HEIGHT = 48;
 const LOGO_WIDTH = 70;
 
-class NavBar extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            dropdownVisible: false
-        };
-
-        this.onDropdownClick = this.onDropdownClick.bind(this);
-    }
-
-    onDropdownClick() {
-        this.setState(prevState => ({
-            dropdownVisible: !prevState.dropdownVisible
-        }));
-    }
-
-    render() {
-        const { dropdownVisible } = this.state;
-        return (
-            <NavBarPresentation
-                dropdownVisible={dropdownVisible}
-                logo={logo}
-                logoHeight={LOGO_HEIGHT}
-                logoWidth={LOGO_WIDTH}
-                onDropdownClick={this.onDropdownClick}
-            />
-        );
-    }
-}
+const NavBar = () => {
+    return (
+        <>
+            <div className={styles.navbar}>
+                <div className={styles.content}>
+                    <div className={styles.flexItem}>
+                        <a href="/" className={`${styles.link} ${styles.homeLink}`}>
+                            <img
+                                className={styles.logo}
+                                src={logo}
+                                width={LOGO_WIDTH}
+                                height={LOGO_HEIGHT}
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div className={styles.flexItem}>
+                        <div className={styles.rightLinks}>
+                            <a
+                                href="https://github.com/rushton3179/personal-site"
+                                className={styles.link}
+                            >
+                                <FontAwesomeIcon icon={faGithub} />
+                            </a>
+                            <a href="mailto:ryan.rushton79@gmail.com" className={styles.link}>
+                                <FontAwesomeIcon icon={faEnvelope} />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </>
+    );
+};
 
 export default NavBar;

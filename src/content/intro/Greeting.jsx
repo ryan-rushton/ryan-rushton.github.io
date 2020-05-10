@@ -1,101 +1,44 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-import Icon from "./icon/Icon";
-import techIcons from "./TechIcons";
-
-import "./Greeting.scss";
+import styles from "./Greeting.module.scss";
 import meCropped from "../static/me_cropped.png";
 
-const roundPortrait = (
-    <img className="rr-greeting-portrait" src={meCropped} alt="" />
-);
-
-const hiText = (
-    <div className="rr-greeting-hi">
-        <h2>Hey, I&apos;m Ryan!</h2>
-    </div>
-);
-
-const github = (
-    <a
-        href="https://github.com/rushton3179/personal-site"
-        className="rr-site-link rr-greeting-github-link"
-    >
-        <FontAwesomeIcon icon={faGithub} />
-    </a>
-);
-
 const greetingText = (
-    <div className="rr-greeting-text">
+    <div className={styles.text}>
         <p>
-            Here you can expect to find a bunch of stuff I&apos;m into,
-            including pics I have taken while on holiday, little apps I have
-            made for things I find interesting and of course how to get in
-            touch.
+            {"I'm a fullstack software engineer from Canberra with a passion for the "}
+            {"frontend and workplace culture."}
         </p>
         <p>
-            Please check out my
-            {github}
-            if you want to see how this site works or a bunch on half finished
-            (or started) projects.
+            {"Here you will find a bit of a CV type spiel, some links to some projects "}
+            {"I have worked on and pics I have taken on holiday. "}
+            {"Please check out my"}
+            <a
+                href="https://github.com/rushton3179/personal-site"
+                className={`rr-site-link ${styles.githubLink}`}
+            >
+                {"github"}
+            </a>
+            {"if you want to see how this site works or a bunch of projects in various "}
+            {"states of completeness."}
         </p>
     </div>
 );
 
-const buildGridRow = (row, index) => (
-    <div className="rr-tech-grid-row" key={`tech-grid-row-${index}`}>
-        {row.map(iconSet => (
-            <Icon
-                icon={iconSet.icon}
-                key={iconSet.icon.iconName}
-                text={iconSet.text}
-            />
-        ))}
-    </div>
-);
-
-const buildTechGrid = () => (
-    <div className="rr-tech-grid">
-        {techIcons.map((row, index) => buildGridRow(row, index))}
-    </div>
-);
-
-const stuffICanDo = (
-    <div className="rr-stuff-can-do">
-        <h4>Tech that I use:</h4>
-        {buildTechGrid()}
-    </div>
-);
-
-const Greeting = props => {
-    const { additionalClassNames } = props;
-    const className = `rr-greeting ${additionalClassNames}`;
-
+const Greeting = () => {
     return (
-        <div className={className}>
-            <div className="rr-greeting-block">
-                <div className="rr-greeting-portrait-and-hi">
-                    {roundPortrait}
-                    {hiText}
+        <div className={`rr-content ${styles.greeting}`}>
+            <div className={styles.content}>
+                <div className={styles.portraitAndHi}>
+                    <img className={styles.portrait} src={meCropped} alt="" />
+                    <div className={styles.hi}>
+                        <h2>{"Hey, I'm Ryan!"}</h2>
+                    </div>
                 </div>
-                <div className="rr-greeting-text-block">
-                    {greetingText}
-                    {stuffICanDo}
-                </div>
+                <div>{greetingText}</div>
             </div>
         </div>
     );
-};
-
-Greeting.propTypes = {
-    additionalClassNames: PropTypes.string
-};
-
-Greeting.defaultProps = {
-    additionalClassNames: ""
 };
 
 export default Greeting;

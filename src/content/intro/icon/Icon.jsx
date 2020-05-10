@@ -54,7 +54,7 @@ class Icon extends React.Component {
 
 Icon.propTypes = {
     icon: PropTypes.shape({ iconName: PropTypes.string.isRequired }).isRequired,
-    text: PropTypes.string.isRequired
+    text: PropTypes.string.isRequired,
 };
 
 export default Icon;

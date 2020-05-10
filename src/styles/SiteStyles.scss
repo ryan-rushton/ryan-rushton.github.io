@@ -1,0 +1,18 @@
+$light-green: #80c0a8;
+$black: #1d1e22;
+$white: #fafafa;
+
+.rr-site-link {
+    color: $light-green;
+}
+
+.rr-content {
+    margin: auto;
+    max-width: 90vw;
+}
+
+@media screen and (min-device-width: 769px) {
+    .rr-content {
+        max-width: 80vw;
+    }
+}
