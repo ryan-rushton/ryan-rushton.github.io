@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import NavBar from "./content/navbar/NavBar";
-import Greeting from "./content/intro/Greeting";
+import Greeting from "./content/intro/Intro";
 import Throbber from "./content/throbber/Throbber";
-import MoreInfo from "./content/intro/MoreInfo";
+import Body from "./content/body/Body";
 import Background from "./content/static/background.jpg";
 
 import styles from "./App.module.scss";
@@ -22,7 +22,7 @@ const App = () => {
                 <NavBar />
                 <Greeting />
                 <div className={styles.cover} style={{ backgroundImage: `url(${bgImage.src})` }} />
-                <MoreInfo />
+                <Body />
             </>
         );
     }

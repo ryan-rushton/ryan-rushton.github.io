@@ -10,9 +10,11 @@ const Project = ({ name, links, description }) => {
                 <div className={styles.links}>
                     {links &&
                         links.map((link) => (
-                            <a key={link} href={link} className="rr-site-link">
-                                {link.replace("https://", "")}
-                            </a>
+                            <span>
+                                <a key={link} href={link} className="rr-site-link">
+                                    {link.replace("https://", "")}
+                                </a>
+                            </span>
                         ))}
                 </div>
             </div>

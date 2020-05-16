@@ -1,24 +1,40 @@
 import React from "react";
-import Icon from "./icon/Icon";
+import Icon, { POPUP_SIDE } from "./icon/Icon";
 import Project from "../project/Project";
-import styles from "./MoreInfo.module.scss";
+import styles from "./Body.module.scss";
 import techIcons from "./TechIcons";
 
-const buildGridRow = (row, index) => (
-    <div className={styles.techGridRow} key={`row-${index}`}>
-        {row.map((iconSet) => (
-            <Icon icon={iconSet.icon} key={iconSet.icon.iconName} text={iconSet.text} />
+const buildGridRow = (row) => (
+    <div
+        className={styles.techGridRow}
+        key={`row-${row.map((iconSet) => iconSet.icon.iconName).join(",")}`}
+    >
+        {row.map((iconSet, index) => (
+            <Icon
+                icon={iconSet.icon}
+                key={iconSet.icon.iconName}
+                text={iconSet.text}
+                popupSide={index <= Math.floor(row.length / 2) ? POPUP_SIDE.right : POPUP_SIDE.left}
+            />
         ))}
     </div>
 );
 
-const MoreInfo = () => {
+const Body = () => {
     return (
-        <div className={"rr-content"}>
+        <div id="rr-body" className={`rr-content ${styles.body}`}>
+            <h1 className={styles.title}>{"About Me"}</h1>
+            <p>
+                {
+                    "I am passionate about building things people love to use, and making complex data as intuitive as possible. I value camaraderie and culture when working in a team."
+                }
+            </p>
             <h1 className={styles.title}>{"Projects"}</h1>
-            {
-                "Here is a bunch of projects I work on from time to time. Some I have have built myself and some I contribute to."
-            }
+            <p>
+                {
+                    "Here is a bunch of projects I work on from time to time. Some I have have built myself and some I contribute to."
+                }
+            </p>
             <div className={styles.projects}>
                 <Project
                     name={"The System"}
@@ -51,6 +67,16 @@ const MoreInfo = () => {
                         "This one is still under construction but it is planned to be a app to help people find an optimum build in the game Destiny. Currently I have built a lot of the infrastructure to get all the required data from the bungie api. I need to build UI's now."
                     }
                 />
+                <Project
+                    name={"eslint-plugin-no-except"}
+                    links={[
+                        "https://github.com/ryan-rushton/eslint-plugin-no-except",
+                        "https://npmjs.com/package/eslint-plugin-no-except",
+                    ]}
+                    description={
+                        "For a product at work, we needed an elsint rule that would disallow the use of Array.includes but allow _.includes as we were working with Internet Explorer."
+                    }
+                />
             </div>
             <h1 className={styles.title}>{"Tech I use"}</h1>
             <div className={styles.techGrid}>{techIcons.map(buildGridRow)}</div>{" "}
@@ -58,4 +84,4 @@ const MoreInfo = () => {
     );
 };
 
-export default MoreInfo;
+export default Body;

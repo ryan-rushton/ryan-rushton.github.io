@@ -21,8 +21,7 @@ const techIcons = [
     [
         {
             icon: faJs,
-            text:
-                "JS. What more can I say, every engineer that loves frontend, loves JS.",
+            text: "JS. What more can I say, every engineer that loves frontend, loves JS.",
         },
         {
             icon: faReact,
@@ -53,8 +52,7 @@ const techIcons = [
         },
         {
             icon: faApple,
-            text:
-                "Apple. Been using macs for years now. I love how easy they are to use.",
+            text: "Apple. Been using macs for years now. I love how easy they are to use.",
         },
         {
             icon: faLinux,
@@ -75,8 +73,7 @@ const techIcons = [
         },
         {
             icon: faAws,
-            text:
-                "AWS. I use this for deployments at work. Makes my life easier.",
+            text: "AWS. I use this for deployments at work. Makes my life easier.",
         },
         {
             icon: faFontAwesome,
