@@ -1,8 +1,8 @@
 import React from "react";
 
 import styles from "./Intro.module.scss";
-import meCropped from "../static/me_cropped.png";
 import Background from "./background/Background";
+import { Me } from "../preloadedImages/preloadedImages";
 
 const goToAboutMe = () => document.getElementById("rr-body").scrollIntoView({ behavior: "smooth" });
 
@@ -12,7 +12,7 @@ const Intro = () => {
             <Background />
             <div className={`rr-content ${styles.intro}`}>
                 <div className={styles.content}>
-                    <img className={styles.portrait} src={meCropped} alt="" />
+                    <img className={styles.portrait} src={Me.src} alt="" />
                     <div className={styles.textBlock}>
                         <div className={styles.firstLine}>
                             {`Hi, I'm `}
