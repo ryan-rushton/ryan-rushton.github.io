@@ -15,15 +15,13 @@ const Intro = () => {
                     <img className={styles.portrait} src={meCropped} alt="" />
                     <div className={styles.textBlock}>
                         <div className={styles.firstLine}>
-                            {`Hey, I'm `}
+                            {`Hi, I'm `}
                             <span className="rr-site-link" onClick={goToAboutMe}>
                                 Ryan
                             </span>
-                            {`!`}
+                            {`,`}
                         </div>
-                        <div className={styles.secondLine}>
-                            {"I'm a fullstack software engineer."}
-                        </div>
+                        <div className={styles.secondLine}>{"a fullstack software engineer."}</div>
                     </div>
                 </div>
             </div>

@@ -6,7 +6,7 @@ import Body from "./content/body/Body";
 import Background from "./content/static/background.jpg";
 
 import styles from "./App.module.scss";
-import "./styles/SiteStyles.scss";
+import "./SiteStyles.scss";
 
 const App = () => {
     const [imageHasLoaded, setImageHasLoaded] = useState(false);

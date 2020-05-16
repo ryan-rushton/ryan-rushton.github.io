@@ -26,7 +26,7 @@ const Body = () => {
             <h1 className={styles.title}>{"About Me"}</h1>
             <p>
                 {
-                    "I am passionate about building things people love to use, and making complex data as intuitive as possible. I value camaraderie and culture when working in a team."
+                    "I am passionate about building things people love to use, and making complex data as intuitive as possible. I enjoy working with people and value camaraderie and culture within in a team."
                 }
             </p>
             <h1 className={styles.title}>{"Projects"}</h1>

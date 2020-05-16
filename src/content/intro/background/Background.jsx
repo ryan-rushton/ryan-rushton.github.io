@@ -11,7 +11,7 @@ const Background = () => {
                 fpsLimit: 60,
                 particles: {
                     number: {
-                        value: 80,
+                        value: 60,
                         density: {
                             enable: true,
                             value_area: 800,
@@ -25,23 +25,8 @@ const Background = () => {
                             sync: true,
                         },
                     },
-                    shape: {
-                        type: "circle",
-                        stroke: {
-                            width: 0,
-                            color: "#000000",
-                        },
-                        polygon: {
-                            nb_sides: 5,
-                        },
-                        image: {
-                            src: "https://cdn.matteobruni.it/images/particles/github.svg",
-                            width: 100,
-                            height: 100,
-                        },
-                    },
                     opacity: {
-                        value: 0.5,
+                        value: 0.3,
                         random: false,
                         anim: {
                             enable: false,
@@ -51,11 +36,11 @@ const Background = () => {
                         },
                     },
                     size: {
-                        value: 3,
+                        value: 4,
                         random: true,
                         anim: {
-                            enable: false,
-                            speed: 20,
+                            enable: true,
+                            speed: 5,
                             size_min: 0.1,
                             sync: false,
                         },
@@ -63,19 +48,14 @@ const Background = () => {
                     line_linked: {
                         enable: true,
                         distance: 100,
-                        color: "random",
-                        opacity: 0.4,
+                        color: "#717171",
+                        opacity: 0.2,
                         width: 1,
-                        triangles: {
-                            enable: true,
-                            color: "#ffffff",
-                            opacity: 0.1,
-                        },
                     },
                     move: {
                         enable: true,
-                        speed: 6,
-                        direction: "none",
+                        speed: 2,
+                        direction: "bottom",
                         random: false,
                         straight: false,
                         out_mode: "out",
