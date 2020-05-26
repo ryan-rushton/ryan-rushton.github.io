@@ -1,5 +1,9 @@
 @import "../../../SiteStyles.scss";
 
+.container {
+    position: relative;
+}
+
 .icon {
     display: inline-block;
     font-size: 1.2em;
@@ -14,9 +18,13 @@
     display: inline-block;
     font-size: 0.8em;
     margin: 10px;
-    max-width: 20vw;
     padding: 5px;
     position: absolute;
+    width: 100px;
+}
+
+.popupLeft {
+    left: -120px;
 }
 
 @media screen and (min-device-width: 769px) {
