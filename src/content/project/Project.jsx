@@ -3,7 +3,7 @@ import React from "react";
 import styles from "./Project.module.scss";
 
 const Project = ({ name, links, description }) => {
-    const isMobile = window.innerWidth < 800;
+    const isMobile = window.innerWidth < 1024;
     return (
         <div className={styles.project}>
             <div className={styles.header}>
