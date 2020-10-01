@@ -2,8 +2,8 @@ language: node_js
 node_js:
     - "node"
 script:
-    - npm test
-    - npm run build
+    - yarn test
+    - yarn build
 branches:
     only:
         - source
