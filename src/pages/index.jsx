@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet";
 import NavBar from "../components/navbar/NavBar";
 import Greeting from "../components/intro/Intro";
 import Throbber from "../components/throbber/Throbber";
@@ -24,6 +25,10 @@ const App = () => {
     if (imageHasLoaded) {
         return (
             <>
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>Ryan Rushton</title>
+                </Helmet>
                 <NavBar />
                 <Greeting />
                 <div
