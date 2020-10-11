@@ -82,7 +82,7 @@ const Body = () => {
                         { full: "https://npmjs.com/package/eslint-plugin-no-except", short: "npm" },
                     ]}
                     description={
-                        "For a product at work, we needed an elsint rule that would disallow the use of Array.includes but allow _.includes as we were working with Internet Explorer."
+                        "For a product at work, we needed an eslint rule that would disallow the use of Array.includes but allow _.includes as we were working with Internet Explorer."
                     }
                 />
             </div>

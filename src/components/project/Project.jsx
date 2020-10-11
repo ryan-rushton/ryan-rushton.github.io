@@ -12,7 +12,7 @@ const Project = ({ name, links, description }) => {
                         links.map((link) => (
                             <span key={link.full}>
                                 <a href={link.full} className="rr-site-link">
-                                    {link.full.replace("https://", "")}
+                                    {link.short}
                                 </a>
                             </span>
                         ))}
