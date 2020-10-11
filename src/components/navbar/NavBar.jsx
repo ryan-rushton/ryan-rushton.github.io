@@ -4,7 +4,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "./NavBar.module.scss";
-import logo from "../static/RR_Logo_Outlined.svg";
+import logo from "../../images/RR_Logo_Outlined.svg";
 
 const LOGO_HEIGHT = 48;
 const LOGO_WIDTH = 70;

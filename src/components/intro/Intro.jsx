@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./Intro.module.scss";
 import Background from "./background/Background";
-import { Me } from "../preloadedImages/preloadedImages";
+import Me from "../../images/me_cropped.png";
 
 const goToAboutMe = () => document.getElementById("rr-body").scrollIntoView({ behavior: "smooth" });
 

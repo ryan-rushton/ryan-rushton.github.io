@@ -3,7 +3,6 @@ import React from "react";
 import styles from "./Project.module.scss";
 
 const Project = ({ name, links, description }) => {
-    const isMobile = window.innerWidth < 1024;
     return (
         <div className={styles.project}>
             <div className={styles.header}>
@@ -13,7 +12,7 @@ const Project = ({ name, links, description }) => {
                         links.map((link) => (
                             <span key={link.full}>
                                 <a href={link.full} className="rr-site-link">
-                                    {isMobile ? link.short : link.full.replace("https://", "")}
+                                    {link.full.replace("https://", "")}
                                 </a>
                             </span>
                         ))}
