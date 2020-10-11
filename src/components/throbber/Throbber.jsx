@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../static/RR_Logo_Outlined.svg";
+import logo from "../../images/RR_Logo_Outlined.svg";
 import "./Throbber.scss";
 
 const Throbber = () => (
