@@ -1,27 +1,27 @@
-@import "../../SiteStyles.scss";
+@import '../../styles/constants.scss';
 
 .project {
-    margin-top: 24px;
+  margin-top: 24px;
 }
 
 .title {
-    margin: 0;
+  margin: 0;
 }
 
 .header {
-    display: inline-flex;
-    justify-content: space-between;
-    margin-bottom: 16px;
-    width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  width: 100%;
 }
 
 .links {
-    display: flex;
-    flex-direction: column;
-    text-align: right;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
 }
 
 .description {
-    padding-left: 16px;
-    white-space: pre-wrap;
+  padding-left: 16px;
+  white-space: pre-wrap;
 }
