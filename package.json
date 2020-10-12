@@ -23,7 +23,7 @@
         "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
         "type-check": "tsc --noEmit",
         "start": "next start",
-        "predeploy": "yarn build && yarn export && touch out/.nojekyll",
+        "predeploy": "yarn build && yarn export",
         "deploy": "gh-pages -b master -d out"
     },
     "devDependencies": {
