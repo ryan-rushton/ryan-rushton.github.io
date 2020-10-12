@@ -1,55 +1,55 @@
-@import "../../SiteStyles.scss";
+@import '../../styles/constants.scss';
 
 .container {
-    position: relative;
-    height: 101vh; // setting this to 101 due to issues on ios safari where the viewport is bigger than 100vh
+  position: relative;
+  height: 101vh; // setting this to 101 due to issues on ios safari where the viewport is bigger than 100vh
 }
 
 .intro {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: calc(50vh - 50px);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: calc(50vh - 50px);
 }
 
 .content {
-    margin: auto;
-    display: flex;
+  margin: auto;
+  display: flex;
 }
 
 .githubLink {
-    margin: 0 6px;
+  margin: 0 6px;
 }
 
 .portrait {
-    display: inline-block;
-    height: 100px;
-    margin-right: 3vh;
-    vertical-align: middle;
+  display: inline-block;
+  height: 100px;
+  margin-right: 3vh;
+  vertical-align: middle;
 }
 
 .textBlock {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .firstLine {
-    display: inline-block;
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-size: 2em;
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 2em;
 }
 
 .secondLine {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 @media screen and (min-device-width: 769px) {
-    .intro {
-        font-size: 1.2em;
-    }
-    .portraitAndHi {
-        font-size: 1.2em;
-    }
+  .intro {
+    font-size: 1.2em;
+  }
+  .portraitAndHi {
+    font-size: 1.2em;
+  }
 }

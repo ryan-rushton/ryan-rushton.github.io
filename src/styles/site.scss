@@ -1,0 +1,25 @@
+@import './constants.scss';
+
+body {
+  background-color: $black;
+  color: $white;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.rr-site-link {
+  color: $light-green;
+  cursor: pointer;
+}
+
+.rr-content {
+  margin: auto;
+  max-width: 90vw;
+}
+
+@media screen and (min-device-width: 769px) {
+  .rr-content {
+    max-width: 80vw;
+  }
+}

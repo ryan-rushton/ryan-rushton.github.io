@@ -6,9 +6,8 @@
 # testing
 /coverage
 
-# production
-public/
-.cache/
+.next
+out
 
 # misc
 .DS_Store

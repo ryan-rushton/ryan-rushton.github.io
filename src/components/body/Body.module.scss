@@ -1,35 +1,35 @@
-@import "../../SiteStyles.scss";
+@import '../../styles/constants.scss';
 
 .body {
-    scroll-margin-top: 48px;
+  scroll-margin-top: 48px;
 }
 
 .projects {
-    padding-left: 16px;
+  padding-left: 16px;
 }
 
 .title {
-    font-family: "Raleway", sans-serif;
-    font-weight: 700;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
 }
 
 .techGrid {
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding-bottom: 35px;
-    width: 100%;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 35px;
+  width: 100%;
 }
 
 .techGridRow {
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 100%;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
 }
 
 @media screen and (min-device-width: 769px) {
-    .body {
-        scroll-margin-top: 56px;
-    }
+  .body {
+    scroll-margin-top: 56px;
+  }
 }
