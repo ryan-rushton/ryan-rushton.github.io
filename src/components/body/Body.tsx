@@ -18,6 +18,7 @@ const GridRow: FC<GridRowProps> = ({ icons }: GridRowProps) => (
         icon={iconSet.icon}
         key={iconSet.icon.iconName}
         text={iconSet.text}
+        width={iconSet.width}
         popupSide={index <= Math.floor(icons.length / 2) ? POPUP_SIDE.right : POPUP_SIDE.left}
       />
     ))}

@@ -11,13 +11,19 @@ export const POPUP_SIDE = {
 interface Props {
   icon: IconDefinition;
   text: string;
+  width?: number;
   popupSide: 'left' | 'right';
 }
 
-const Icon: FC<Props> = ({ icon, text, popupSide }: Props) => {
+const Icon: FC<Props> = ({ icon, text, popupSide, width }: Props) => {
   const [showPopup, setShowPopup] = useState(false);
 
-  const style = { opacity: showPopup ? 100 : 0, zIndex: showPopup ? 2 : -2 };
+  const style = {
+    opacity: showPopup ? 100 : 0,
+    zIndex: showPopup ? 5 : -5,
+    marginLeft: popupSide === 'right' ? 10 : -(width || 30) - 10,
+    width,
+  };
 
   return (
     <div className={styles.container}>
