@@ -32,7 +32,7 @@ const App: FC = () => {
           <meta property="og:type" content="website" />
           <meta property="og:title" content={title} />
           <meta property="og:description" content={description} />
-          <meta property="og:site_name" content={'Ryans personal site'} />
+          <meta property="og:site_name" content={title} />
         </Head>
         <NavBar />
         <Greeting />
