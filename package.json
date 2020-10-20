@@ -12,7 +12,7 @@
         "react": "^16.14.0",
         "react-dom": "^16.14.0",
         "react-helmet": "^6.1.0",
-        "react-particles-js": "^3.3.0",
+        "react-particles-js": "^3.4.0",
         "sass": "^1.27.0"
     },
     "scripts": {
