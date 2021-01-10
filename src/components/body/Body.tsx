@@ -9,14 +9,11 @@ interface GridRowProps {
 }
 
 const GridRow: FC<GridRowProps> = ({ icons }: GridRowProps) => (
-  <div
-    className={styles.techGridRow}
-    key={`row-${icons.map((iconSet) => iconSet.icon.iconName).join(',')}`}
-  >
+  <div className={styles.techGridRow} key={`row-${icons.map((iconSet) => iconSet.text).join(',')}`}>
     {icons.map((iconSet, index) => (
       <Icon
         icon={iconSet.icon}
-        key={iconSet.icon.iconName}
+        key={iconSet.text}
         text={iconSet.text}
         width={iconSet.width}
         popupSide={index <= Math.floor(icons.length / 2) ? POPUP_SIDE.right : POPUP_SIDE.left}

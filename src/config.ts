@@ -2,7 +2,7 @@ export default {
   title: 'Ryan Rushton',
   author: {
     name: 'Ryan Rushton',
-    summary: 'a fullstack software engineer.',
+    summary: 'A fullstack software engineer.',
   },
-  description: 'My portfolio website',
+  description: "Ryan Rushton's portfolio website",
 };

@@ -35,7 +35,6 @@ const Icon: FC<Props> = ({ icon, text, popupSide, width }: Props) => {
       <div
         ref={iconRef}
         className={styles.icon}
-        key={icon.iconName}
         onMouseOver={() => setShowPopup(true)}
         onMouseOut={() => setShowPopup(false)}
         onFocus={() => setShowPopup(true)}
