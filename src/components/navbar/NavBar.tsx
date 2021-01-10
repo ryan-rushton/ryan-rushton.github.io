@@ -1,7 +1,5 @@
 import React, { FC } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { FaGithub, FaEnvelope } from 'react-icons/fa';
 import styles from './NavBar.module.scss';
 
 const LOGO_HEIGHT = 48;
@@ -25,10 +23,10 @@ const NavBar: FC = () => {
         <div className={styles.flexItem}>
           <div className={styles.rightLinks}>
             <a href="https://github.com/rushton3179/personal-site" className={styles.link}>
-              <FontAwesomeIcon icon={faGithub} />
+              <FaGithub />
             </a>
             <a href="mailto:ryan.rushton79@gmail.com" className={styles.link}>
-              <FontAwesomeIcon icon={faEnvelope} />
+              <FaEnvelope />
             </a>
           </div>
         </div>

@@ -1,6 +1,4 @@
-import React, { FC, useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import React, { FC, ReactNode, useRef, useState } from 'react';
 import styles from './Icon.module.scss';
 
 export const POPUP_SIDE = {
@@ -9,7 +7,7 @@ export const POPUP_SIDE = {
 } as const;
 
 interface Props {
-  icon: IconDefinition;
+  icon: ReactNode;
   text: string;
   width?: number;
   popupSide: 'left' | 'right';
@@ -17,22 +15,25 @@ interface Props {
 
 const Icon: FC<Props> = ({ icon, text, popupSide, width }: Props) => {
   const [showPopup, setShowPopup] = useState(false);
+  const iconRef = useRef<HTMLDivElement>(null);
+  const popupRef = useRef<HTMLDivElement>(null);
 
+  const iconWidth = iconRef.current?.clientWidth || 0;
+  const popupWidth = popupRef.current?.clientWidth || 0;
+  const popupGap = 10;
+
+  // TODO Get popper.js working instead of this dodgy positioning
   const style = {
     opacity: showPopup ? 100 : 0,
     zIndex: showPopup ? 5 : -5,
-    marginLeft: popupSide === 'right' ? 10 : -(width || 30) - 10,
+    marginLeft: popupSide === 'right' ? popupGap : -(iconWidth + popupWidth + popupGap),
     width,
   };
 
   return (
     <div className={styles.container}>
-      {popupSide === POPUP_SIDE.left && (
-        <div className={`${styles.popup} ${styles.popupLeft}`} style={style}>
-          {text}
-        </div>
-      )}
       <div
+        ref={iconRef}
         className={styles.icon}
         key={icon.iconName}
         onMouseOver={() => setShowPopup(true)}
@@ -40,13 +41,11 @@ const Icon: FC<Props> = ({ icon, text, popupSide, width }: Props) => {
         onFocus={() => setShowPopup(true)}
         onBlur={() => setShowPopup(false)}
       >
-        <FontAwesomeIcon icon={icon} />
+        {icon}
       </div>
-      {popupSide === POPUP_SIDE.right && (
-        <div className={styles.popup} style={style}>
-          {text}
-        </div>
-      )}
+      <div ref={popupRef} className={styles.popup} style={style}>
+        {text}
+      </div>
     </div>
   );
 };

@@ -18,8 +18,6 @@ const App: FC = () => {
     bgImage.onload = () => setImageHasLoaded(true);
     bgImage.onerror = () => setImageHasLoaded(true);
     bgImage.src = '/thailand.jpg';
-  } else if (!imageHasLoaded) {
-    setImageHasLoaded(true);
   }
 
   if (imageHasLoaded) {

@@ -91,7 +91,8 @@ const Body: FC = () => {
           }
         />
       </div>
-      <h1 className={styles.title}>{'Tech I use'}</h1>
+      <h1 className={styles.title}>{'Tech'}</h1>
+      <div>{'A collection of technologies I have used in my last few jobs or in open source.'}</div>
       <div className={styles.techGrid}>
         {techIcons.map((icons) => (
           <GridRow key={icons.map((icon) => icon.text).join('+')} icons={icons} />
