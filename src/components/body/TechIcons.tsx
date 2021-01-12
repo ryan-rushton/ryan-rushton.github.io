@@ -34,6 +34,9 @@ export interface TechIcon {
   width?: number;
 }
 
+/**
+ * Icons that are displayed at the end of the page indicating tech I have used.
+ */
 const techIcons: TechIcon[][] = [
   [
     {
