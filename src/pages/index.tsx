@@ -31,6 +31,10 @@ const App: FC = () => {
           <meta property="og:title" content={title} />
           <meta property="og:description" content={description} />
           <meta property="og:site_name" content={title} />
+          <meta
+            name="google-site-verification"
+            content="aS1PdJaaTNWeCb2FTM8-R5DFfDZu9kBEdOoGDSKRE1w"
+          />
         </Head>
         <NavBar />
         <Greeting />
