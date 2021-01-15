@@ -25,10 +25,6 @@ const App: FC = () => {
       <>
         <Head>
           <title>{title}</title>
-          <meta
-            name="google-site-verification"
-            content="aS1PdJaaTNWeCb2FTM8-R5DFfDZu9kBEdOoGDSKRE1w"
-          />
           <link rel="icon" type="image/svg" href="/RR_Logo_Outlined.svg" />
           <meta name="description" content={description} />
           <meta property="og:type" content="website" />
