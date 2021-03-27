@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 import Particles from 'react-particles-js';
-
 import styles from './Background.module.scss';
 
 const Background: FC = () => {

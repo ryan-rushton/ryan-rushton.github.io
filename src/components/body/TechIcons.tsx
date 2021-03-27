@@ -1,11 +1,15 @@
 import React, { ReactNode } from 'react';
 import {
   FaAws,
+  FaBitbucket,
+  FaConfluence,
   FaCss3,
   FaDocker,
+  FaGitAlt,
   FaGithub,
   FaHtml5,
   FaJava,
+  FaJira,
   FaJs,
   FaLinux,
   FaMicrosoft,
@@ -13,19 +17,15 @@ import {
   FaReact,
   FaSass,
   FaUikit,
-  FaJira,
-  FaConfluence,
-  FaBitbucket,
-  FaGitAlt,
 } from 'react-icons/fa';
 import {
-  SiTypescript,
+  SiBamboo,
   SiGitlab,
   SiMaterialUi,
   SiOracle,
   SiPostgresql,
-  SiBamboo,
   SiTravisci,
+  SiTypescript,
 } from 'react-icons/si';
 
 export interface TechIcon {

@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import styles from './Intro.module.scss';
 import Background from './background/Background';
+import styles from './Intro.module.scss';
 
 const goToAboutMe = (): void =>
   document?.getElementById('rr-body')?.scrollIntoView({ behavior: 'smooth' });

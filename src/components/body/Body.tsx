@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import Project from '../project/Project';
-import Icon, { POPUP_SIDE } from './icon/Icon';
 import styles from './Body.module.scss';
+import Icon, { POPUP_SIDE } from './icon/Icon';
 import techIcons, { TechIcon } from './TechIcons';
 
 interface GridRowProps {

@@ -1,9 +1,9 @@
-import React, { FC, useState } from 'react';
 import Head from 'next/head';
-import NavBar from '../components/navbar/NavBar';
-import Greeting from '../components/intro/Intro';
-import Throbber from '../components/throbber/Throbber';
+import React, { FC, useState } from 'react';
 import Body from '../components/body/Body';
+import Greeting from '../components/intro/Intro';
+import NavBar from '../components/navbar/NavBar';
+import Throbber from '../components/throbber/Throbber';
 import config from '../config';
 import styles from './index.module.scss';
 
