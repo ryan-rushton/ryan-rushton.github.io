@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { FaGithub, FaEnvelope } from 'react-icons/fa';
+import { FaEnvelope, FaGithub } from 'react-icons/fa';
 import styles from './NavBar.module.scss';
 
 const LOGO_HEIGHT = 48;
