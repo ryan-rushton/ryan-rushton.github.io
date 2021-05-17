@@ -1,17 +1,13 @@
 {
   "extends": [
-    "config:base"
+    "config:base",
+    ":prHourlyLimitNone",
+    ":automergePatch"
   ],
   "reviewers": [
     "ryan-rushton"
   ],
   "packageRules": [
-    {
-      "matchUpdateTypes": [
-        "patch"
-      ],
-      "automerge": true
-    },
     {
       "matchDepTypes": [
         "devDependencies"
