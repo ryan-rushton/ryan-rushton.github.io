@@ -1,0 +1,22 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "reviewers": [
+    "ryan-rushton"
+  ],
+  "packageRules": [
+    {
+      "matchUpdateTypes": [
+        "patch"
+      ],
+      "automerge": true
+    },
+    {
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "automerge": true
+    }
+  ]
+}
