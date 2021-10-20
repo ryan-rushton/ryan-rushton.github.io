@@ -10,7 +10,7 @@
         "react-helmet": "6.1.0",
         "react-icons": "4.2.0",
         "react-particles-js": "3.5.3",
-        "sass": "1.42.1"
+        "sass": "1.43.2"
     },
     "scripts": {
         "build": "next build",
