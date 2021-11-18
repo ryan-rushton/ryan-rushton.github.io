@@ -40,7 +40,7 @@
         "gh-pages": "3.2.3",
         "prettier": "2.4.1",
         "prettier-plugin-organize-imports": "2.3.4",
-        "tsparticles": "1.37.3",
+        "tsparticles": "1.37.4",
         "typescript": "4.5.2"
     },
     "browserslist": [
