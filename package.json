@@ -41,7 +41,7 @@
         "prettier": "2.5.1",
         "prettier-plugin-organize-imports": "2.3.4",
         "tsparticles": "1.37.5",
-        "typescript": "4.5.3"
+        "typescript": "4.5.4"
     },
     "browserslist": [
         ">0.2%",
