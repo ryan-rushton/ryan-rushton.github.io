@@ -21,7 +21,7 @@ import {
 import {
   SiBamboo,
   SiGitlab,
-  SiMaterialUi,
+  SiMaterialui,
   SiOracle,
   SiPostgresql,
   SiTravisci,
@@ -52,7 +52,7 @@ const techIcons: TechIcon[][] = [
       text: 'React',
     },
     {
-      icon: <SiMaterialUi />,
+      icon: <SiMaterialui />,
       text: 'Material UI',
       width: 70,
     },
