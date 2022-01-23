@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import Particles from 'react-particles-js';
+import Particles from 'react-tsparticles';
 import styles from './Background.module.scss';
 
 const Background: FC = () => {
@@ -25,7 +25,7 @@ const Background: FC = () => {
             },
           },
           opacity: {
-            value: 0.3,
+            value: 0.6,
             random: false,
             anim: {
               enable: false,
