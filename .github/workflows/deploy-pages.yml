@@ -17,7 +17,7 @@ jobs:
         uses: actions/setup-node@v2
 
       - name: Cache node_modules
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         env:
           cache-name: cache-node_modules
         with:
@@ -28,7 +28,7 @@ jobs:
             ${{ runner.os }}-${{ env.cache-name }}-
 
       - name: Cache eslint
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         env:
           cache-name: cache-eslint
         with:
@@ -43,7 +43,7 @@ jobs:
         run: echo "::set-output name=dir::$(yarn cache dir)"
 
       - name: Cache yarn
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         env:
           cache-name: cache-yarn
         with:
@@ -54,7 +54,7 @@ jobs:
             ${{ runner.os }}-${{ env.cache-name }}-
 
       - name: Cache Next
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         env:
           cache-name: cache-nextjs
         with:
