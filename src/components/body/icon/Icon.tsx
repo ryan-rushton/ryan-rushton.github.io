@@ -1,4 +1,4 @@
-import React, { FC, ReactNode, useRef, useState } from 'react';
+import { FC, ReactNode, useRef, useState } from 'react';
 import styles from './Icon.module.scss';
 
 export const POPUP_SIDE = {

@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import styles from './Throbber.module.scss';
 
 const Throbber: FC = () => (

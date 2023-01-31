@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
-import Particles from 'react-tsparticles';
+import { FC } from 'react';
+import { Particles } from 'react-tsparticles';
 import styles from './Background.module.scss';
 
 const Background: FC = () => {

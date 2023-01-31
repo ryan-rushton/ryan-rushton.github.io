@@ -37,6 +37,7 @@
   },
   "rules": {
     "import/order": "warn",
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "react/react-in-jsx-scope": "off"
   }
 }
