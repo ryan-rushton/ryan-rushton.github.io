@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import React, { FC, useState } from 'react';
+import { FC, useState } from 'react';
 import Body from '../components/body/Body';
 import Greeting from '../components/intro/Intro';
 import NavBar from '../components/navbar/NavBar';

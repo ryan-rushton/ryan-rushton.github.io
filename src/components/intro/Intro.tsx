@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import Background from './background/Background';
 import styles from './Intro.module.scss';
 

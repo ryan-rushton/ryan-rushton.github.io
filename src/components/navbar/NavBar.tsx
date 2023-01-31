@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { FaEnvelope, FaGithub } from 'react-icons/fa';
 import styles from './NavBar.module.scss';
 
