@@ -4,12 +4,12 @@
     "private": true,
     "homepage": "https://ryan-rushton.github.io",
     "dependencies": {
-        "next": "13.1.6",
+        "next": "13.2.4",
         "react": "18.2.0",
         "react-dom": "18.2.0",
-        "react-icons": "4.7.1",
-        "react-tsparticles": "2.8.0",
-        "sass": "1.58.3"
+        "react-icons": "4.8.0",
+        "react-tsparticles": "2.9.3",
+        "sass": "1.60.0"
     },
     "scripts": {
         "build": "next build",
@@ -29,7 +29,7 @@
         "@typescript-eslint/eslint-plugin": "5.56.0",
         "@typescript-eslint/parser": "5.56.0",
         "eslint": "8.36.0",
-        "eslint-config-next": "13.1.6",
+        "eslint-config-next": "13.2.4",
         "eslint-config-prettier": "8.8.0",
         "eslint-plugin-import": "2.27.5",
         "eslint-plugin-jsx-a11y": "6.7.1",
@@ -39,7 +39,7 @@
         "gh-pages": "5.0.0",
         "prettier": "2.8.7",
         "prettier-plugin-organize-imports": "3.2.2",
-        "typescript": "4.9.5"
+        "typescript": "5.0.2"
     },
     "browserslist": [
         ">0.2%",
