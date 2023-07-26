@@ -4,12 +4,12 @@
     "private": true,
     "homepage": "https://ryan-rushton.github.io",
     "dependencies": {
-        "next": "13.1.6",
+        "next": "13.4.12",
         "react": "18.2.0",
         "react-dom": "18.2.0",
-        "react-icons": "4.7.1",
-        "react-tsparticles": "2.10.1",
-        "sass": "1.63.6"
+        "react-icons": "4.10.1",
+        "react-tsparticles": "2.11.0",
+        "sass": "1.64.1"
     },
     "scripts": {
         "build": "next build",
@@ -23,23 +23,23 @@
         "deploy": "gh-pages -b master -d out"
     },
     "devDependencies": {
-        "@types/node": "18.17.1",
+        "@types/node": "20.4.5",
         "@types/react": "18.2.16",
         "@types/react-dom": "18.2.7",
-        "@typescript-eslint/eslint-plugin": "5.62.0",
-        "@typescript-eslint/parser": "5.62.0",
+        "@typescript-eslint/eslint-plugin": "6.2.0",
+        "@typescript-eslint/parser": "6.2.0",
         "eslint": "8.45.0",
-        "eslint-config-next": "13.1.6",
+        "eslint-config-next": "13.4.12",
         "eslint-config-prettier": "8.8.0",
         "eslint-plugin-import": "2.27.5",
         "eslint-plugin-jsx-a11y": "6.7.1",
-        "eslint-plugin-prettier": "4.2.1",
+        "eslint-plugin-prettier": "5.0.0",
         "eslint-plugin-react": "7.33.0",
         "eslint-plugin-react-hooks": "4.6.0",
         "gh-pages": "5.0.0",
-        "prettier": "2.8.8",
+        "prettier": "3.0.0",
         "prettier-plugin-organize-imports": "3.2.3",
-        "typescript": "4.9.5"
+        "typescript": "5.1.6"
     },
     "browserslist": [
         ">0.2%",
