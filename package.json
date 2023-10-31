@@ -4,7 +4,7 @@
     "private": true,
     "homepage": "https://ryan-rushton.github.io",
     "dependencies": {
-        "next": "13.4.19",
+        "next": "13.5.6",
         "react": "18.2.0",
         "react-dom": "18.2.0",
         "react-icons": "4.10.1",
