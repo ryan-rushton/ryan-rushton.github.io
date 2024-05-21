@@ -1,3 +1,3 @@
-![Build+Deploy](https://github.com/ryan-rushton/ryan-rushton.github.io/workflows/Deploy+Next.js+site+to+Pages/badge.svg?branch=main)
+[![Deploy Next.js site to Pages](https://github.com/ryan-rushton/ryan-rushton.github.io/actions/workflows/nextjs.yml/badge.svg)](https://github.com/ryan-rushton/ryan-rushton.github.io/actions/workflows/nextjs.yml)
 
-Personal portfolio/CV kind of page. You can access it at [ryan-rushton.github.io](https://ryan-rushton.github.io/).
+Personal page. Nothing really atm. You can access it at [ryan-rushton.github.io](https://ryan-rushton.github.io/).
