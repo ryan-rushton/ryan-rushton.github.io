@@ -1,13 +1,12 @@
 import Head from 'next/head';
-import { FC, useState } from 'react';
-import Body from '../components/body/Body';
-import Greeting from '../components/intro/Intro';
-import NavBar from '../components/navbar/NavBar';
-import Throbber from '../components/throbber/Throbber';
+import { useState } from 'react';
+import { Intro } from '../components/intro/Intro';
+import { NavBar } from '../components/navbar/NavBar';
+import { Throbber } from '../components/throbber/Throbber';
 import config from '../config';
 import styles from './index.module.scss';
 
-const App: FC = () => {
+function App() {
   const { title, description } = config;
   const [imageHasLoaded, setImageHasLoaded] = useState(false);
   let bgImage;
@@ -33,12 +32,7 @@ const App: FC = () => {
           <meta property="og:site_name" content={title} />
         </Head>
         <NavBar />
-        <Greeting />
-        <div
-          className={styles.cover}
-          style={{ backgroundImage: bgImage ? `url(${bgImage.src})` : '' }}
-        />
-        <Body />
+        <Intro />
       </>
     );
   }
@@ -48,6 +42,6 @@ const App: FC = () => {
       <Throbber />
     </div>
   );
-};
+}
 
 export default App;
