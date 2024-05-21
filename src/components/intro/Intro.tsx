@@ -1,14 +1,11 @@
-import { FC } from 'react';
-import Background from './background/Background';
 import styles from './Intro.module.scss';
 
 const goToAboutMe = (): void =>
   document?.getElementById('rr-body')?.scrollIntoView({ behavior: 'smooth' });
 
-const Intro: FC = () => {
+export function Intro() {
   return (
     <div className={styles.container}>
-      <Background />
       <div className={`rr-content ${styles.intro}`}>
         <div className={styles.content}>
           <img className={styles.portrait} src={'/me_cropped.png'} alt="" />
@@ -36,6 +33,4 @@ const Intro: FC = () => {
       </div>
     </div>
   );
-};
-
-export default Intro;
+}

@@ -4,12 +4,12 @@
     "private": true,
     "homepage": "https://ryan-rushton.github.io",
     "dependencies": {
-        "next": "13.4.19",
-        "react": "18.2.0",
-        "react-dom": "18.2.0",
-        "react-icons": "4.10.1",
-        "react-tsparticles": "2.11.0",
-        "sass": "1.64.2"
+        "next": "14.2.3",
+        "react": "18.3.1",
+        "react-dom": "18.3.1",
+        "react-icons": "5.2.1",
+        "react-tsparticles": "2.12.2",
+        "sass": "1.77.2"
     },
     "scripts": {
         "build": "next build",
@@ -19,15 +19,15 @@
         "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
         "type-check": "tsc --noEmit",
         "start": "next start",
-        "predeploy": "yarn build && yarn export",
+        "predeploy": "pnpm build && pnpm export",
         "deploy": "gh-pages -b master -d out"
     },
     "devDependencies": {
-        "@types/node": "20.12.11",
-        "@types/react": "18.2.79",
-        "@types/react-dom": "18.2.25",
-        "@typescript-eslint/eslint-plugin": "7.2.0",
-        "@typescript-eslint/parser": "7.2.0",
+        "@types/node": "20.12.12",
+        "@types/react": "18.3.2",
+        "@types/react-dom": "18.3.0",
+        "@typescript-eslint/eslint-plugin": "7.10.0",
+        "@typescript-eslint/parser": "7.10.0",
         "eslint": "8.57.0",
         "eslint-config-next": "14.2.3",
         "eslint-config-prettier": "9.1.0",
@@ -46,5 +46,6 @@
         "not dead",
         "not ie <= 11",
         "not op_mini all"
-    ]
+    ],
+    "packageManager": "pnpm@9.1.0+sha512.67f5879916a9293e5cf059c23853d571beaf4f753c707f40cb22bed5fb1578c6aad3b6c4107ccb3ba0b35be003eb621a16471ac836c87beb53f9d54bb4612724"
 }
