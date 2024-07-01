@@ -39,7 +39,7 @@
         "gh-pages": "6.1.1",
         "prettier": "3.3.2",
         "prettier-plugin-organize-imports": "3.2.4",
-        "typescript": "5.5.2"
+        "typescript": "5.5.3"
     },
     "browserslist": [
         ">0.2%",
