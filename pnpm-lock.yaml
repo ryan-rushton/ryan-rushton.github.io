@@ -31,11 +31,11 @@ importers:
         specifier: 22.13.14
         version: 22.13.14
       '@types/react':
-        specifier: 18.3.19
-        version: 18.3.19
+        specifier: 18.3.20
+        version: 18.3.20
       '@types/react-dom':
         specifier: 18.3.5
-        version: 18.3.5(@types/react@18.3.19)
+        version: 18.3.5(@types/react@18.3.20)
       '@typescript-eslint/eslint-plugin':
         specifier: 8.28.0
         version: 8.28.0(@typescript-eslint/parser@8.28.0(eslint@8.57.1)(typescript@5.8.2))(eslint@8.57.1)(typescript@5.8.2)
@@ -222,8 +222,8 @@ packages:
     peerDependencies:
       '@types/react': ^18.0.0
 
-  '@types/react@18.3.19':
-    resolution: {integrity: sha512-fcdJqaHOMDbiAwJnXv6XCzX0jDW77yI3tJqYh1Byn8EL5/S628WRx9b/y3DnNe55zTukUQKrfYxiZls2dHcUMw==}
+  '@types/react@18.3.20':
+    resolution: {integrity: sha512-IPaCZN7PShZK/3t6Q87pfTkRm6oLTd4vztyoj+cbHUF1g3FfVb2tFIL79uCRKEfv16AhqDMBywP2VW3KIZUvcg==}
 
   '@typescript-eslint/eslint-plugin@8.28.0':
     resolution: {integrity: sha512-lvFK3TCGAHsItNdWZ/1FkvpzCxTHUVuFrdnOGLMa0GGCFIbCgQWVk3CzCGdA7kM3qGVc+dfW9tr0Z/sHnGDFyg==}
@@ -1883,11 +1883,11 @@ snapshots:
 
   '@types/prop-types@15.7.12': {}
 
-  '@types/react-dom@18.3.5(@types/react@18.3.19)':
+  '@types/react-dom@18.3.5(@types/react@18.3.20)':
     dependencies:
-      '@types/react': 18.3.19
+      '@types/react': 18.3.20
 
-  '@types/react@18.3.19':
+  '@types/react@18.3.20':
     dependencies:
       '@types/prop-types': 15.7.12
       csstype: 3.1.3
