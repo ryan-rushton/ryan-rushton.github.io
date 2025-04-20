@@ -4,7 +4,7 @@
     "private": true,
     "homepage": "https://ryan-rushton.github.io",
     "dependencies": {
-        "next": "14.2.26",
+        "next": "14.2.28",
         "react": "18.3.1",
         "react-dom": "18.3.1",
         "react-icons": "5.2.1",
@@ -29,7 +29,7 @@
         "@typescript-eslint/eslint-plugin": "8.28.0",
         "@typescript-eslint/parser": "8.28.0",
         "eslint": "8.57.1",
-        "eslint-config-next": "14.2.25",
+        "eslint-config-next": "14.2.28",
         "eslint-config-prettier": "10.1.2",
         "eslint-plugin-import": "2.31.0",
         "eslint-plugin-jsx-a11y": "6.10.2",
