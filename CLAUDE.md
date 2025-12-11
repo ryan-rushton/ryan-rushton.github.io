@@ -124,9 +124,9 @@ Usage: Apply via utility classes (`.command`, `.success`, `.error`, `.info`, `.h
 ### GitHub Actions Workflows
 
 1. **Build+Deploy** (`.github/workflows/deploy-pages.yml` on push to `main`):
-   - Setup Node 20.x + pnpm 9.1.0
-   - Install dependencies (`pnpm install --frozen-lockfile`)
-   - Build (`pnpm build` → TypeScript check + Vite build)
+   - Setup Node 20.x with npm cache
+   - Install dependencies (`npm ci`)
+   - Build (`npm run build` → TypeScript check + Vite build)
    - Upload build artifact to GitHub
    - Deploy using official `actions/deploy-pages@v4`
    - No deployment branch needed - uses GitHub Pages artifacts
