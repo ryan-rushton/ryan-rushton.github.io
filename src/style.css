@@ -35,7 +35,8 @@
   font-family: 'Fira Code';
   font-style: normal;
   font-weight: 400;
-  src: url('https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/woff2/FiraCode-Regular.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/woff2/FiraCode-Regular.woff2')
+    format('woff2');
   font-display: swap;
 }
 
@@ -43,7 +44,8 @@
   font-family: 'Fira Code';
   font-style: normal;
   font-weight: 500;
-  src: url('https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/woff2/FiraCode-Medium.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/woff2/FiraCode-Medium.woff2')
+    format('woff2');
   font-display: swap;
 }
 
@@ -51,7 +53,8 @@
   font-family: 'Fira Code';
   font-style: normal;
   font-weight: 700;
-  src: url('https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/woff2/FiraCode-Bold.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/woff2/FiraCode-Bold.woff2')
+    format('woff2');
   font-display: swap;
 }
 
@@ -65,7 +68,9 @@ body {
   font-family: 'Fira Code', 'Courier New', monospace;
   color: var(--text-primary);
   padding: 20px;
-  font-feature-settings: 'liga' 1, 'calt' 1; /* Enable ligatures */
+  font-feature-settings:
+    'liga' 1,
+    'calt' 1; /* Enable ligatures */
 }
 
 .terminal-window {
@@ -196,7 +201,9 @@ body {
   font-family: 'Fira Code', 'Courier New', monospace;
   font-size: 14px;
   caret-color: var(--color-cyan);
-  font-feature-settings: 'liga' 1, 'calt' 1;
+  font-feature-settings:
+    'liga' 1,
+    'calt' 1;
 }
 
 /* Color classes for output */
@@ -263,10 +270,12 @@ body {
 }
 
 @keyframes blink {
-  0%, 50% {
+  0%,
+  50% {
     opacity: 1;
   }
-  51%, 100% {
+  51%,
+  100% {
     opacity: 0;
   }
 }

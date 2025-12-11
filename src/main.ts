@@ -16,7 +16,9 @@ const commands: Record<string, Command> = {
     description: 'Show available commands',
     execute: () => {
       const commandList = Object.entries(commands)
-        .map(([name, cmd]) => `  <span class="command">${name.padEnd(12)}</span> ${cmd.description}`)
+        .map(
+          ([name, cmd]) => `  <span class="command">${name.padEnd(12)}</span> ${cmd.description}`
+        )
         .join('\n');
       return `<div class="section-header">Available Commands:</div>\n${commandList}`;
     },
@@ -119,7 +121,8 @@ function executeCommand(input: string): void {
 function updatePrompt(): void {
   const promptSpan = document.querySelector('.input-line .prompt');
   if (promptSpan) {
-    promptSpan.innerHTML = '<span style="color: var(--color-cyan); font-weight: 500;">ryan@rushton</span>';
+    promptSpan.innerHTML =
+      '<span style="color: var(--color-cyan); font-weight: 500;">ryan@rushton</span>';
   }
 }
 
