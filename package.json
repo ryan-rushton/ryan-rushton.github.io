@@ -1,51 +1,18 @@
 {
-    "name": "ryan-rushton.github.io",
-    "version": "1.0.0",
-    "private": true,
-    "homepage": "https://ryan-rushton.github.io",
-    "dependencies": {
-        "next": "14.2.3",
-        "react": "18.3.1",
-        "react-dom": "18.3.1",
-        "react-icons": "5.2.1",
-        "react-tsparticles": "2.12.2",
-        "sass": "1.77.2"
-    },
-    "scripts": {
-        "build": "next build",
-        "dev": "next dev",
-        "export": "next export",
-        "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-        "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
-        "type-check": "tsc --noEmit",
-        "start": "next start",
-        "predeploy": "pnpm build && pnpm export",
-        "deploy": "gh-pages -b master -d out"
-    },
-    "devDependencies": {
-        "@types/node": "20.12.12",
-        "@types/react": "18.3.2",
-        "@types/react-dom": "18.3.0",
-        "@typescript-eslint/eslint-plugin": "7.10.0",
-        "@typescript-eslint/parser": "7.10.0",
-        "eslint": "8.57.0",
-        "eslint-config-next": "14.2.3",
-        "eslint-config-prettier": "9.1.0",
-        "eslint-plugin-import": "2.29.1",
-        "eslint-plugin-jsx-a11y": "6.8.0",
-        "eslint-plugin-prettier": "5.1.3",
-        "eslint-plugin-react": "7.34.1",
-        "eslint-plugin-react-hooks": "4.6.2",
-        "gh-pages": "6.1.1",
-        "prettier": "3.2.5",
-        "prettier-plugin-organize-imports": "3.2.4",
-        "typescript": "5.4.5"
-    },
-    "browserslist": [
-        ">0.2%",
-        "not dead",
-        "not ie <= 11",
-        "not op_mini all"
-    ],
-    "packageManager": "pnpm@9.1.0+sha512.67f5879916a9293e5cf059c23853d571beaf4f753c707f40cb22bed5fb1578c6aad3b6c4107ccb3ba0b35be003eb621a16471ac836c87beb53f9d54bb4612724"
+  "name": "ryan-rushton.github.io",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "gh-pages": "6.1.1",
+    "typescript": "5.7.2",
+    "vite": "6.0.3"
+  },
+  "packageManager": "pnpm@9.1.0+sha512.67f5879916a9293e5cf059c23853d571beaf4f753c707f40cb22bed5fb1578c6aad3b6c4107ccb3ba0b35be003eb621a16471ac836c87beb53f9d54bb4612724"
 }
