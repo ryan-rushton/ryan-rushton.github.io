@@ -32,6 +32,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Lint
+        run: npm run lint
+
+      - name: Format check
+        run: npx prettier --check "**/*.{ts,tsx,js,json,html,css,md}"
+
       - name: Build
         run: npm run build
 
