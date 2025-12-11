@@ -1,4 +1,10 @@
 import './style.css';
+import bannerTemplate from './templates/banner.html?raw';
+import aboutTemplate from './templates/about.html?raw';
+import skillsTemplate from './templates/skills.html?raw';
+import experienceTemplate from './templates/experience.html?raw';
+import contactTemplate from './templates/contact.html?raw';
+import projectsTemplate from './templates/projects.html?raw';
 
 interface Command {
   description: string;
@@ -18,94 +24,27 @@ const commands: Record<string, Command> = {
 
   about: {
     description: 'Learn more about me',
-    execute: () => `
-<div class="section-header">$ whoami</div>
-<div class="indent">
-  Hi! I'm <span class="highlight">Ryan Rushton</span>, a <span class="info">Staff Software Engineer at Canva</span>.
-
-  I specialize in <span class="highlight">frontend engineering</span> but work fullstack on
-  <span class="info">generative AI systems</span>, building tools that empower millions of
-  designers worldwide.
-
-  I'm passionate about creating elegant, performant user experiences and
-  contributing to open source projects.
-</div>
-    `.trim(),
+    execute: () => aboutTemplate.trim(),
   },
 
   skills: {
     description: 'View technical skills',
-    execute: () => `
-<div class="section-header">$ ls -la ~/skills</div>
-<div class="indent">
-  <span class="info">Languages:</span>
-  TypeScript, JavaScript, Python, Java
-
-  <span class="info">Frontend:</span>
-  React, Next.js, Redux, Vite, HTML/CSS, Web Performance
-
-  <span class="info">Backend:</span>
-  Node.js, GraphQL, REST APIs, Microservices
-
-  <span class="info">AI/ML:</span>
-  Generative AI Systems, LLM Integration, Prompt Engineering
-
-  <span class="info">Tools & Cloud:</span>
-  Git, Docker, AWS, CI/CD, Monitoring & Observability
-</div>
-    `.trim(),
+    execute: () => skillsTemplate.trim(),
   },
 
   experience: {
     description: 'Show work experience',
-    execute: () => `
-<div class="section-header">$ git log --all --oneline --graph</div>
-<div class="indent">
-  <span class="highlight">Canva</span> — Staff Software Engineer
-  <span class="success">●</span> May 2025 - Present | <span class="info">Canva Code</span>
-      Building AI-powered code generation tools
-
-  <span class="success">●</span> Oct 2022 - May 2025 | <span class="info">Magic Design & Design Generation</span>
-      Generative AI systems for design automation
-
-  <span class="success">●</span> Apr 2021 - Oct 2022 | <span class="info">Search</span>
-      Senior Frontend Engineer, search experience & discovery
-
-  <span class="highlight">Previous Experience</span>
-  <span class="success">●</span> Orion Health — Healthcare software
-  <span class="success">●</span> Australian Institute of Sport — Sports technology
-</div>
-    `.trim(),
+    execute: () => experienceTemplate.trim(),
   },
 
   contact: {
     description: 'Get in touch',
-    execute: () => `
-<div class="section-header">$ cat ~/contact.txt</div>
-<div class="indent">
-  <span class="info">GitHub:</span>   <a href="https://github.com/ryan-rushton" target="_blank" class="link">github.com/ryan-rushton</a>
-  <span class="info">Email:</span>    <a href="mailto:ryan.rushton79@gmail.com" class="link">ryan.rushton79@gmail.com</a>
-  <span class="info">LinkedIn:</span> <a href="https://linkedin.com/in/ryan-rushton" target="_blank" class="link">linkedin.com/in/ryan-rushton</a>
-</div>
-    `.trim(),
+    execute: () => contactTemplate.trim(),
   },
 
   projects: {
     description: 'View notable projects',
-    execute: () => `
-<div class="section-header">$ tree ~/projects -L 2</div>
-<div class="indent">
-  <span class="success">├──</span> <span class="highlight">Destiny Item Manager</span>
-  <span class="success">│   └──</span> Major contributor to <a href="https://github.com/DestinyItemManager/DIM" target="_blank" class="link">DIM</a>
-  <span class="success">│   └──</span> Loadout optimization & management features
-  <span class="success">│   └──</span> Used by millions of Destiny 2 players
-
-  <span class="success">├──</span> <span class="highlight">Terminal Portfolio</span>
-  <span class="success">│   └──</span> This site! Built with Vite + TypeScript
-
-  <span class="success">└──</span> More on <a href="https://github.com/ryan-rushton" target="_blank" class="link">github.com/ryan-rushton</a>
-</div>
-    `.trim(),
+    execute: () => projectsTemplate.trim(),
   },
 
   clear: {
@@ -124,28 +63,9 @@ const commands: Record<string, Command> = {
 
   banner: {
     description: 'Show welcome banner',
-    execute: () => getBanner(),
+    execute: () => bannerTemplate.trim(),
   },
 };
-
-function getBanner(): string {
-  return `
-<pre class="ascii-art">
- ____                    ____            _     _
-|  _ \\ _   _  __ _ _ __ |  _ \\ _   _ ___| |__ | |_ ___  _ __
-| |_) | | | |/ _\` | '_ \\| |_) | | | / __| '_ \\| __/ _ \\| '_ \\
-|  _ <| |_| | (_| | | | |  _ <| |_| \\__ \\ | | | || (_) | | | |
-|_| \\_\\\\__, |\\__,_|_| |_|_| \\_\\\\__,_|___/_| |_|\\__\\___/|_| |_|
-       |___/
-</pre>
-<div style="margin-bottom: 16px;">
-  Welcome to my terminal portfolio! 👋
-
-  Type <span class="command">help</span> to see available commands.
-  Type <span class="command">about</span> to learn more about me.
-</div>
-  `.trim();
-}
 
 function addLine(content: string, className: string = ''): void {
   const terminalContent = document.getElementById('terminal-content');
@@ -209,7 +129,7 @@ function init(): void {
   if (!input) return;
 
   // Show welcome banner
-  addLine(getBanner());
+  addLine(bannerTemplate.trim());
 
   // Update the prompt
   updatePrompt();
