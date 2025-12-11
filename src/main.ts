@@ -21,10 +21,14 @@ const commands: Record<string, Command> = {
     execute: () => `
 <div class="section-header">$ whoami</div>
 <div class="indent">
-  Hi! I'm <span class="highlight">Ryan Rushton</span>, a <span class="info">fullstack software engineer</span>.
+  Hi! I'm <span class="highlight">Ryan Rushton</span>, a <span class="info">Staff Software Engineer at Canva</span>.
 
-  I love building elegant solutions to complex problems and working with
-  modern technologies across the entire stack.
+  I specialize in <span class="highlight">frontend engineering</span> but work fullstack on
+  <span class="info">generative AI systems</span>, building tools that empower millions of
+  designers worldwide.
+
+  I'm passionate about creating elegant, performant user experiences and
+  contributing to open source projects.
 </div>
     `.trim(),
   },
@@ -35,16 +39,19 @@ const commands: Record<string, Command> = {
 <div class="section-header">$ ls -la ~/skills</div>
 <div class="indent">
   <span class="info">Languages:</span>
-  TypeScript, JavaScript, Python, Java, Go
+  TypeScript, JavaScript, Python, Java
 
   <span class="info">Frontend:</span>
-  React, Next.js, Vue, Vite, HTML/CSS
+  React, Next.js, Redux, Vite, HTML/CSS, Web Performance
 
   <span class="info">Backend:</span>
-  Node.js, Express, FastAPI, Spring Boot
+  Node.js, GraphQL, REST APIs, Microservices
 
-  <span class="info">Tools & Others:</span>
-  Git, Docker, AWS, PostgreSQL, MongoDB
+  <span class="info">AI/ML:</span>
+  Generative AI Systems, LLM Integration, Prompt Engineering
+
+  <span class="info">Tools & Cloud:</span>
+  Git, Docker, AWS, CI/CD, Monitoring & Observability
 </div>
     `.trim(),
   },
@@ -52,12 +59,21 @@ const commands: Record<string, Command> = {
   experience: {
     description: 'Show work experience',
     execute: () => `
-<div class="section-header">$ git log --all --oneline</div>
+<div class="section-header">$ git log --all --oneline --graph</div>
 <div class="indent">
-  <span class="success">●</span> Senior Software Engineer
-  <span class="success">●</span> Full Stack Development
-  <span class="success">●</span> Team Leadership & Mentoring
-  <span class="success">●</span> System Architecture & Design
+  <span class="highlight">Canva</span> — Staff Software Engineer
+  <span class="success">●</span> May 2025 - Present | <span class="info">Canva Code</span>
+      Building AI-powered code generation tools
+
+  <span class="success">●</span> Oct 2022 - May 2025 | <span class="info">Magic Design & Design Generation</span>
+      Generative AI systems for design automation
+
+  <span class="success">●</span> Apr 2021 - Oct 2022 | <span class="info">Search</span>
+      Senior Frontend Engineer, search experience & discovery
+
+  <span class="highlight">Previous Experience</span>
+  <span class="success">●</span> Orion Health — Healthcare software
+  <span class="success">●</span> Australian Institute of Sport — Sports technology
 </div>
     `.trim(),
   },
@@ -77,12 +93,17 @@ const commands: Record<string, Command> = {
   projects: {
     description: 'View notable projects',
     execute: () => `
-<div class="section-header">$ tree ~/projects -L 1</div>
+<div class="section-header">$ tree ~/projects -L 2</div>
 <div class="indent">
-  <span class="success">├──</span> Portfolio Website (You are here!)
-  <span class="success">├──</span> Open Source Contributions
-  <span class="success">├──</span> Personal Tools & Scripts
-  <span class="success">└──</span> More on <a href="https://github.com/ryan-rushton" target="_blank" class="link">GitHub</a>
+  <span class="success">├──</span> <span class="highlight">Destiny Item Manager</span>
+  <span class="success">│   └──</span> Major contributor to <a href="https://github.com/DestinyItemManager/DIM" target="_blank" class="link">DIM</a>
+  <span class="success">│   └──</span> Loadout optimization & management features
+  <span class="success">│   └──</span> Used by millions of Destiny 2 players
+
+  <span class="success">├──</span> <span class="highlight">Terminal Portfolio</span>
+  <span class="success">│   └──</span> This site! Built with Vite + TypeScript
+
+  <span class="success">└──</span> More on <a href="https://github.com/ryan-rushton" target="_blank" class="link">github.com/ryan-rushton</a>
 </div>
     `.trim(),
   },
