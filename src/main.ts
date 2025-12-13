@@ -129,6 +129,28 @@ function updatePrompt(): void {
   }
 }
 
+function updateAutocompleteSuggestion(input: HTMLInputElement): void {
+  const suggestionSpan = document.getElementById('autocomplete-suggestion');
+  if (!suggestionSpan) return;
+
+  const value = input.value.toLowerCase();
+
+  if (!value) {
+    suggestionSpan.textContent = '';
+    return;
+  }
+
+  const matches = Object.keys(commands).filter((cmd) => cmd.startsWith(value));
+
+  if (matches.length === 1) {
+    const match = matches[0];
+    // Show the typed part + remaining part
+    suggestionSpan.textContent = value + match.slice(value.length);
+  } else {
+    suggestionSpan.textContent = '';
+  }
+}
+
 function init(): void {
   const input = document.getElementById('terminal-input') as HTMLInputElement;
 
@@ -140,6 +162,11 @@ function init(): void {
   // Update the prompt
   updatePrompt();
 
+  // Handle input changes for autocomplete suggestion
+  input.addEventListener('input', () => {
+    updateAutocompleteSuggestion(input);
+  });
+
   // Handle input
   input.addEventListener('keydown', (e: KeyboardEvent) => {
     if (e.key === 'Enter') {
@@ -147,26 +174,24 @@ function init(): void {
       const value = input.value;
       executeCommand(value);
       input.value = '';
-    }
-  });
-
-  // Keep input focused
-  document.addEventListener('click', () => {
-    input.focus();
-  });
-
-  // Handle tab completion (basic)
-  input.addEventListener('keydown', (e: KeyboardEvent) => {
-    if (e.key === 'Tab') {
+      updateAutocompleteSuggestion(input); // Clear suggestion after command
+    } else if (e.key === 'Tab') {
+      // Handle tab completion
       e.preventDefault();
       const value = input.value.toLowerCase();
       if (value) {
         const matches = Object.keys(commands).filter((cmd) => cmd.startsWith(value));
         if (matches.length === 1) {
           input.value = matches[0];
+          updateAutocompleteSuggestion(input); // Update suggestion after tab completion
         }
       }
     }
+  });
+
+  // Keep input focused
+  document.addEventListener('click', () => {
+    input.focus();
   });
 
   input.focus();

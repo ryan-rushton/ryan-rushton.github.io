@@ -44,15 +44,18 @@
         </div>
         <div class="input-line">
           <span class="prompt"></span>
-          <input
-            type="text"
-            id="terminal-input"
-            autocomplete="off"
-            autocorrect="off"
-            autocapitalize="off"
-            spellcheck="false"
-            autofocus
-          />
+          <div class="input-container">
+            <span id="autocomplete-suggestion" class="autocomplete-suggestion"></span>
+            <input
+              type="text"
+              id="terminal-input"
+              autocomplete="off"
+              autocorrect="off"
+              autocapitalize="off"
+              spellcheck="false"
+              autofocus
+            />
+          </div>
         </div>
       </div>
     </div>

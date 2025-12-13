@@ -192,6 +192,27 @@ body {
   gap: 8px;
 }
 
+.input-container {
+  flex: 1;
+  position: relative;
+  display: flex;
+}
+
+.autocomplete-suggestion {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--text-dim);
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 14px;
+  pointer-events: none;
+  white-space: pre;
+  opacity: 0.5;
+  font-feature-settings:
+    'liga' 1,
+    'calt' 1;
+}
+
 #terminal-input {
   flex: 1;
   background: transparent;
@@ -201,6 +222,8 @@ body {
   font-family: 'Fira Code', 'Courier New', monospace;
   font-size: 14px;
   caret-color: var(--color-cyan);
+  position: relative;
+  z-index: 1;
   font-feature-settings:
     'liga' 1,
     'calt' 1;
