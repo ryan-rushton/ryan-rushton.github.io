@@ -24,32 +24,26 @@ const commands: Record<string, Command> = {
       return `<div class="section-header">Available Commands:</div>\n${commandList}`;
     },
   },
-
   about: {
     description: 'Learn more about me',
     execute: () => aboutTemplate.trim(),
   },
-
   skills: {
     description: 'View technical skills',
     execute: () => skillsTemplate.trim(),
   },
-
   experience: {
     description: 'Show work experience',
     execute: () => experienceTemplate.trim(),
   },
-
   contact: {
     description: 'Get in touch',
     execute: () => contactTemplate.trim(),
   },
-
   projects: {
     description: 'View notable projects',
     execute: () => projectsTemplate.trim(),
   },
-
   clear: {
     description: 'Clear the terminal',
     execute: () => {
@@ -58,12 +52,6 @@ const commands: Record<string, Command> = {
       return commands.banner.execute();
     },
   },
-
-  theme: {
-    description: 'Toggle terminal theme (coming soon)',
-    execute: () => '<span class="warning">⚠ Feature coming soon!</span>',
-  },
-
   banner: {
     description: 'Show welcome banner',
     execute: () => bannerTemplate.trim(),
@@ -159,15 +147,17 @@ function init(): void {
   // Show welcome banner (without animation for instant display)
   addLine(bannerTemplate.trim(), false);
 
-  // Update the prompt
   updatePrompt();
 
+<<<<<<< HEAD
   // Handle input changes for autocomplete suggestion
   input.addEventListener('input', () => {
     updateAutocompleteSuggestion(input);
   });
 
   // Handle input
+=======
+>>>>>>> 3a7261d (Remove theme)
   input.addEventListener('keydown', (e: KeyboardEvent) => {
     if (e.key === 'Enter') {
       e.preventDefault();
