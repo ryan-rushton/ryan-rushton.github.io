@@ -1,10 +1,10 @@
 import './style.css';
-import bannerTemplate from './templates/banner.html?raw';
 import aboutTemplate from './templates/about.html?raw';
-import skillsTemplate from './templates/skills.html?raw';
-import experienceTemplate from './templates/experience.html?raw';
+import bannerTemplate from './templates/banner.html?raw';
 import contactTemplate from './templates/contact.html?raw';
+import experienceTemplate from './templates/experience.html?raw';
 import projectsTemplate from './templates/projects.html?raw';
+import skillsTemplate from './templates/skills.html?raw';
 
 interface Command {
   description: string;
