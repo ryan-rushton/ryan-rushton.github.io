@@ -70,12 +70,14 @@ const commands: Record<string, Command> = {
   },
 };
 
-function addLine(content: string, className: string = ''): void {
+function addLine(content: string, animate: boolean = true): void {
   const terminalContent = document.getElementById('terminal-content');
   if (!terminalContent) return;
 
   const line = document.createElement('div');
-  line.className = `line ${className}`;
+  line.className = animate ? `line` : '';
+  line.style.marginBottom = '8px';
+  line.style.lineHeight = '1.6';
   line.innerHTML = content;
   terminalContent.appendChild(line);
 
@@ -132,8 +134,8 @@ function init(): void {
 
   if (!input) return;
 
-  // Show welcome banner
-  addLine(bannerTemplate.trim());
+  // Show welcome banner (without animation for instant display)
+  addLine(bannerTemplate.trim(), false);
 
   // Update the prompt
   updatePrompt();
@@ -168,6 +170,12 @@ function init(): void {
   });
 
   input.focus();
+
+  // Show terminal after initialization is complete
+  const terminalWindow = document.querySelector('.terminal-window') as HTMLElement;
+  if (terminalWindow) {
+    terminalWindow.style.display = 'block';
+  }
 }
 
 // Initialize when DOM is ready
