@@ -17,7 +17,8 @@ const commands: Record<string, Command> = {
     execute: () => {
       const commandList = Object.entries(commands)
         .map(
-          ([name, cmd]) => `  <span class="command">${name.padEnd(12)}</span> ${cmd.description}`
+          ([name, cmd]) =>
+            `<div class="indent"><span class="command">${name.padEnd(12)}</span> ${cmd.description}</div>`
         )
         .join('\n');
       return `<div class="section-header">Available Commands:</div>\n${commandList}`;
