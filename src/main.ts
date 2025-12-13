@@ -149,15 +149,12 @@ function init(): void {
 
   updatePrompt();
 
-<<<<<<< HEAD
   // Handle input changes for autocomplete suggestion
   input.addEventListener('input', () => {
     updateAutocompleteSuggestion(input);
   });
 
   // Handle input
-=======
->>>>>>> 3a7261d (Remove theme)
   input.addEventListener('keydown', (e: KeyboardEvent) => {
     if (e.key === 'Enter') {
       e.preventDefault();
