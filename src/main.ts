@@ -55,7 +55,7 @@ const commands: Record<string, Command> = {
     execute: () => {
       const content = document.getElementById('terminal-content');
       if (content) content.innerHTML = '';
-      return '';
+      return commands.banner.execute();
     },
   },
 
